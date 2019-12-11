@@ -1,6 +1,6 @@
 <template>
     <div style="background: white">
-        <MenuBar  v-on:user="identity = 'USER'" v-on:visitor="identity = 'VISITOR'" v-on:expert="identity = 'EXPERT'" v-on:admin="identity = 'ADMIN'"></MenuBar>
+        <MenuBar  v-on:user="identity = 'USER'" v-on:visitor="identity = 'VISITOR'" v-on:expert="identity = 'EXPERT'" v-on:admin="identity = 'ADMIN'" style="background:#515a6e"></MenuBar>
         <Modal v-model="modal1" cancel-text="取消" @on-cancel="check_ok" draggable scrollable title="发送申请成功">
             <h3>您已成功发送申请，请耐心等待管理员审核</h3>
             <div slot="footer">
@@ -33,9 +33,10 @@
                         </li>
                     </ul>
                 </div>
-                <div class="certify-detail">
+                <div class="certify-detail"  style="width: 100%;background-color: white;height: 650px">
                     <div v-if="identity == 'VISITOR'" style="width: 100%; text-align: center; min-height: 450px">
-                        <h2 style="margin-top: 80px">您还未登录！<br> 请登录后再申请认证</h2>
+                    
+                         <img src="../images/login.png" style="margin-left: -30%;height: 600px;width: 100%">
                     </div>
                     <div class="layout-content-main" v-show="(identity == 'USER' || identity == 'ADMIN') && same_name == false">
                         <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
@@ -62,7 +63,7 @@
                     </div>
                 </div>
             </Content>
-            <Footer class="layout-footer-center" style="background-color: #666666; color: #eeeeee;">
+            <Footer class="layout-footer-center" style="background-color: #515a6e; color: #eeeeee;">
                 2019-2019 &copy; ZebraScience
                 <router-link :to="{path:'/aboutUs'}" style="margin-left: 20px; color: #eeeeee">联系我们</router-link>
             </Footer>
@@ -221,7 +222,7 @@
     .layout-content-main{
         padding: 40px;
         width: 80%;
-        background-color: white;
+        
     }
     .same-name-expert{
         padding-top: 80px;
@@ -234,5 +235,10 @@
         font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
         font-size: 15px;
         margin-bottom: 3px;
+        
     }
+    
+    .ivu-menu-primary{
+      background:#515a6e;
+      }
 </style>

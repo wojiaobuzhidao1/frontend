@@ -375,9 +375,12 @@
     }
     .top{
         padding: 10px;
-        background: rgba(0, 140, 229, .7);
+        background: #515a6e;
         color: #fff;
         text-align: center;
         border-radius: 2px;
     }
+    .ivu-menu-primary{
+      background:#515a6e
+      }
 </style>

@@ -53,6 +53,15 @@
         width: 20%;
         margin-right: 3px
     }
+    .ivu-modal-header{
+      align-items: center;
+    }
+    .ivu-modal-content{
+       width: 20px;
+       font-size: 15px;
+       margin-left: 10%;
+       align-items: center;
+    }
 </style>
 <template>
     <div class="index">
@@ -71,9 +80,9 @@
         </Dropdown>
         <div v-else style="margin-left: 85%; margin-top:1%;">
             <Button type="text" @click="modal1=true" style="font-size: 15px; text-align: right; margin-right: 2%">登录</Button>
-            <Modal v-model="modal1" title="登录" ok-text="登录" cancel-text="取消" @on-ok="login" @on-cancel="cancel" @keyup.enter.native="login">
-                <p>邮箱<input v-model="email" type="email" style="margin-left: 17px"/></p><br/>
-                <p>密码<input v-model="password" type="password" style="margin-left: 17px"/></p>
+            <Modal  v-model="modal1" title="登录" ok-text="登录" cancel-text="取消"  @on-ok="login" @on-cancel="cancel" @keyup.enter.native="login">
+                <p style="font-size: 15px;margin-left: 10%">邮箱<input v-model="email" type="email" style="margin-left: 20%"/></p><br/>
+                <p style="font-size: 15px;margin-left: 10%">密码<input v-model="password" type="password" style="margin-left: 20%"/></p>
             </Modal>
             <Button type="text" @click="jump_register" style="font-size: 15px;">注册</Button>
         </div>
@@ -87,15 +96,14 @@
                     <p>Welcome to Zebra Science!</p>
                 </h2>
                 <Input style="width: 50%; margin-left: 25%" v-model="search_content" @keyup.enter.native="search">
-                    <Select v-model="search_item" slot="prepend" style="width: 80px;background-color: #eeeeee;color: black">
-                        <Option value="professor">专家</Option>
-                        <Option value="paper">论文</Option>
-                        <Option value="organization">机构</Option>
+                    <Select v-model="search_item" slot="prepend" style="width: 80px;background-color: #515a6e;color: white">
+                        <Option value="professor"><b>专家</b></Option>
+                        <Option value="paper"><b>论文</b></Option>
+                        <Option value="organization"><b>机构</b></Option>
                     </Select>
-                    <Button  @click="search"  slot="append" style="background-color:#57c5f7;color: white" icon="ios-search"></Button>
-                    <Button v-if="search_item=='paper'" @click="advance=!advance"  slot="append" style="background-color:#57c5f7;color: white;border-left: 1px solid white; margin-left: 2px">高级检索↓</Button>
-                    <Button v-if="search_item=='professor'" @click="extra_org=!extra_org"  slot="append" style="background-color:#57c5f7;color: white;border-left: 1px solid white; margin-left: 2px">所在机构↓</Button>
-
+                    <Button  @click="search"  slot="append" ><img v-if="and_times<4" src="../images/search.jpg" @click="and_times++" height="20" width="20" style="vertical-align:middle"></Button>
+                    <Button v-if="search_item=='paper'" @click="advance=!advance"  slot="append" >高级检索↓</Button>
+                    <Button v-if="search_item=='professor'" @click="extra_org=!extra_org"  slot="append" >所在机构↓</Button>
                 </Input>
                 <div style="width: 50%; margin-left: 25%; text-align: left" v-show="advance&&search_item=='paper'">
                     <div class="extra-item">

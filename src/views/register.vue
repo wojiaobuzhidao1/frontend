@@ -1,6 +1,9 @@
 <template>
+<div> <MenuBar></MenuBar>
     <div class="layout-content">
+        <br>
         <p style="font-size: 40px;">欢迎注册 Zebra Science</p>
+        <br>
         <div class="layout-content-main">
             <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
                 <FormItem label="用户名" prop="name" >
@@ -26,11 +29,17 @@
             </Form>
         </div>
     </div>
+  </div>
 </template>
 
 <script>
+    import MenuBar from './menuBar.vue'
+
     export default {
         name: "register",
+        components:{
+            MenuBar
+        },
         data () {
             return {
                 codeContent:'获取验证码',
@@ -149,7 +158,11 @@
         padding-left: 30%;
         overflow: hidden;
         background: #fff;
-
+        font-size: 20px;
+        width: 100%;
+     
+        padding-top: 5%;
+        margin-bottom: 5%;
         border-radius: 4px;
     }
     .input-select-class {
@@ -159,4 +172,10 @@
     .layout-content-main{
         padding: 40px;
     }
+     .ivu-menu-primary{
+      background:#515a6e
+      }
+      .ivu-btn-primary{
+        background: #1e7fb8;
+      }
 </style>
