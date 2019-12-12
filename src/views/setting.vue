@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MenuBar  v-on:user="identity = 'USER'" v-on:visitor="identity = 'VISITOR'" v-on:expert="identity = 'EXPERT'" v-on:admin="identity = 'ADMIN'"></MenuBar>
+        <MenuBar  v-on:user="identity = 'USER'" v-on:visitor="identity = 'VISITOR'" v-on:expert="identity = 'EXPERT'" v-on:admin="identity = 'ADMIN'" style="background:#515a6e"></MenuBar>
         <div class="certify-detail">
             <div v-if="identity == 'VISITOR'" style="width: 100%; text-align: center; height: 480px;">
                 <h2 style="margin-top: 80px">您还未登录！<br>请先登录</h2>
