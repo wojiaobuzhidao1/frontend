@@ -34,10 +34,9 @@
                     </ul>
                 </div>
                 <div class="certify-detail"  style="width: 100%;background-color: white;height: 650px">
-                    <div v-if="identity == 'VISITOR'" style="width: 100%; text-align: center; min-height: 450px">
-                    
-                         <img src="../images/login.png" style="margin-left: -30%;height: 600px;width: 100%">
-                    </div>
+									<div v-if="identity == 'VISITOR'" style="width: 100%; text-align: center; height: 480px;">
+											<h2 style="margin-top: 80px">您还未登录！<br> 无法查看个人主页</h2>
+									</div>
                     <div class="layout-content-main" v-show="(identity == 'USER' || identity == 'ADMIN') && same_name == false">
                         <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
                             <FormItem label="真实姓名" prop="name" >

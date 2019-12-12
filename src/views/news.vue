@@ -29,8 +29,8 @@
 <template>
     <div class="news_page" style="width: 100%;background-color: white;height: 650px">
         <MenuBar  v-on:user="identity = 'USER'" v-on:visitor="identity = 'VISITOR'" v-on:expert="identity = 'EXPERT'" v-on:admin="identity = 'ADMIN'" style="background:#515a6e"></MenuBar>
-        <div v-if="identity == 'VISITOR'" style="width: 100%; text-align: center; height: 450px;">
-            <img src="../images/news.png" style="margin-left: 3%;height: 600px;width: 80%">
+        <div v-if="identity == 'VISITOR'" style="width: 100%; text-align: center; height: 480px;">
+            <h2 style="margin-top: 80px">您还未登录！<br> 无法查看个人主页</h2>
         </div>
         <div v-else style="margin-top: 60px">
             <Row>
