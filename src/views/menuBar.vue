@@ -1,5 +1,5 @@
 <template>
-    <Menu mode="horizontal" :theme="theme1" active-name="1" style="width:100%; position: fixed">
+    <Menu class="menutype" mode="horizontal" :theme="theme1" active-name="1" style="width:100%; position: fixed">
         <router-link :to="index_url" style="float:left">
             <MenuItem name="1">
                 <Icon type="ios-home" size="20"/>
@@ -33,9 +33,11 @@
                 <p>密码<input v-model="password" type="password" style="margin-left: 17px"/></p>
             </Modal>
         </MenuItem>
-        <a :href="register_url" style="float: right;">
-            <MenuItem v-if="identity == 'VISITOR'" :href="register_url" name="4">
-                注册
+        <a style="float: right">
+            <MenuItem name="4">
+                <a @click="jump_register" style="size: 35px; color: #ffffff">
+									注册
+								</a>
             </MenuItem>
         </a>
     </Menu>
@@ -50,13 +52,12 @@
             input:'',
             search_content: '',
             search_item:'',
-        },
+				},
         data(){
             return{
                 modal1: false,
                 theme1: 'primary',
                 index_url:'/',
-                register_url:'/register',
                 email: '',
                 password: '',
                 identity: this.GLOBAL.userType,
@@ -135,6 +136,9 @@
             },
             setting () {
                 this.$router.push({path: '/setting'})
+						},
+						jump_register(){
+                this.$router.push({path: '/register'})
             },
             logout () {
                 this.GLOBAL.setUserType('VISITOR');

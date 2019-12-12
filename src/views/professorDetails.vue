@@ -65,7 +65,7 @@
                     <Row>
                         <Col span="5">
                             <div class="person-image" style="text-align: center">
-                                <img src="../images/zebra.png" height="125px" style="margin: 5px; border-radius: 20%; padding: 3px; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.15);">
+                                <img src="../images/timg.jpg" height="125px" style="margin: 5px; border-radius: 20%; padding: 3px; background-color: #fff; border: 1px solid rgba(0, 0, 0, 0.15);">
                                 <br>
                                 <Button v-if="identity != 'VISITOR'" icon="ios-heart" style="width: 90%; font-size: 14px" v-model="showlike" :class="{liked: isliked}" @click.native="toggle_like">
                                     {{showlike}}
@@ -145,9 +145,8 @@
                     </Row>
                 </div>
             </Content>
-            <Footer class="layout-footer-center" style="background-color: #666666; color: #eeeeee;">
-                2019-2019 &copy; ZebraScience
-                <router-link :to="{path:'/aboutUs'}" style="margin-left: 20px; color: #eeeeee">联系我们</router-link>
+            <Footer class="layout-footer-center" style="background-color: #515a6e; color: #515a6e;">
+                <AboutUs></AboutUs>
             </Footer>
         </Layout>
     </div>
@@ -155,11 +154,13 @@
 
 <script>
     import MenuBar from './menuBar.vue'
-    import Netgraph from './netgraph'
+		import Netgraph from './netgraph'
+		import AboutUs from './aboutUs.vue'
     export default {
         components:{
             MenuBar,
-            Netgraph
+						Netgraph,
+						AboutUs
         },
         name: 'professorDetails',
         data () {

@@ -3,7 +3,7 @@
         <MenuBar  v-on:user="identity = 'USER'" v-on:visitor="identity = 'VISITOR'" v-on:expert="identity = 'EXPERT'" v-on:admin="identity = 'ADMIN'"></MenuBar>
         <div class="certify-detail">
             <div v-if="identity == 'VISITOR'" style="width: 100%; text-align: center; height: 480px;">
-                <h2 style="margin-top: 80px">您还未登录！<br> Zebra 请您登录</h2>
+                <h2 style="margin-top: 80px">您还未登录！<br>请先登录</h2>
             </div>
             <Tabs value="name2" :animated="false" style="min-height:480px; margin-top: 60px; width: 100%; text-align: center" v-show="identity != 'VISITOR'">
                 <TabPane label="修改用户名" name="name1"  @click.native="handleReset ('change_pwd')" v-if="identity != 'EXPERT'">
@@ -63,19 +63,21 @@
             </Tabs>
         </div>
         <Layout>
-            <Footer class="layout-footer-center" style="background-color: #666666; color: #eeeeee;">
-                2019-2019 &copy; ZebraScience
-                <router-link :to="{path:'/aboutUs'}" style="margin-left: 20px; color: #eeeeee">联系我们</router-link>            </Footer>
+            <Footer class="layout-footer-center" style="background-color: #515a6e; color: #eeeeee;">
+                <AboutUs></AboutUs>
+						</Footer>
         </Layout>
     </div>
 </template>
 
 <script>
     import MenuBar from './menuBar.vue'
-    import myUpload from 'vue-image-crop-upload';
+		import myUpload from 'vue-image-crop-upload';
+		import AboutUs from './aboutUs.vue'
     export default {
         components:{
-            MenuBar,
+						MenuBar,
+						AboutUs,
             'my-upload': myUpload,
         },
         name: "setting",

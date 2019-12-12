@@ -1,5 +1,4 @@
-# ZebraScienceFrontEnd
-ZebraScienceFrontEnd-Vue.js
+
 
 ## Install
 

@@ -2,7 +2,7 @@ let util = {
 
 };
 util.title = function (title) {
-    title = title ? title + '- Zebra Science': 'Zebra Science';
+    title = title ? title + '- Science Searching': 'Science Searching';
     window.document.title = title;
 };
 

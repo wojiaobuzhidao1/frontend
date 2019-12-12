@@ -1,271 +1,23 @@
 webpackJsonp([3],{
 
-/***/ 250:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menuBar_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-// import Button from "../../dist/vendors";
-/* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
-        // Button,
-        MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a
-    },
-    name: "search_paper",
-    data: function data() {
-        return {
-            modal1: false,
-            wordcloud_modal: false,
-            // wordcloud_path: '',
-            wordcloud_show: false,
-            index_url: '/',
-            register_url: '/register',
-            identity: this.GLOBAL.userType,
-            theme1: 'primary',
-            search_results: [],
-            type: '',
-            pageNum: '',
-            totalNum: 0
-        };
-    },
-    created: function created() {
-        this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
-    },
-
-    methods: {
-        check_word_cloud: function check_word_cloud() {
-            this.wordcloud_modal = true;
-        },
-        quit_word_cloud: function quit_word_cloud() {
-            this.wordcloud_modal = false;
-        },
-        getSearchDetails: function getSearchDetails(item, content) {
-            this.wordcloud_show = false;
-            var that = this;
-            console.log("get: item + " + item + "; content + " + content + "; pageNum + " + this.pageNum);
-            if (this.$route.query.advance_data) {
-                var params = { 'keyw_and': this.$route.query.advance_data.and,
-                    'keyw_or': this.$route.query.advance_data.or,
-                    'keyw_not': this.$route.query.advance_data.none,
-                    'title': content,
-                    'author': this.$route.query.advance_writer,
-                    'journal': this.$route.query.advance_book,
-                    'start_time': this.$route.query.advance_time[0],
-                    'end_time': this.$route.query.advance_time[1],
-                    'page_num': this.pageNum
-                };
-                this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_paper_nb", params).then(function (res) {
-                    console.log(res);
-                    var detail = JSON.parse(res.body);
-                    console.log(detail);
-                    that.search_results = detail.msg;
-                    that.type = item;
-                    that.wordcloud_show = true;
-                    if (that.pageNum == '') that.GLOBAL.setWordCloud(detail.word_cloud_path);
-                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
-                    if (detail.total_count != 0) that.totalNum = detail.total_count;
-                    if (that.pageNum == '') that.pageNum = 1;
-
-                    window.scrollTo(0, 0);
-                }, function (res) {
-                    console.log(res);
-                });
-            } else if (this.$route.query.extra_org_name) {
-                var _params = { 'organization_name': this.$route.query.extra_org_name, 'professor_name': content };
-                this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_professor_nb", _params).then(function (res) {
-                    console.log(res);
-                    var detail = JSON.parse(res.body);
-                    console.log(detail);
-                    that.search_results = detail.msg;
-                    that.type = item;
-                    that.wordcloud_show = false;
-                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
-                    if (detail.total_count != 0) that.totalNum = detail.total_count;
-                    if (that.pageNum == '') that.pageNum = 1;
-
-                    window.scrollTo(0, 0);
-                }, function (res) {
-                    console.log(res);
-                });
-            } else {
-                var param = { 'page_num': this.pageNum };
-                console.log(param);
-                this.$http.get(this.GLOBAL.domain + "/api/v1/search_" + item + "/" + content, { params: param }).then(function (res) {
-                    var detail = JSON.parse(res.body);
-                    console.log("search success");
-                    console.log(detail);
-                    that.search_results = detail.msg;
-                    that.type = item;
-                    console.log(that.GLOBAL.wordcloud_path);
-                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
-                    if (item == 'paper' || item == 'organization') {
-                        that.totalNum = detail.count;
-                        if (item == 'paper') {
-                            that.wordcloud_show = true;
-                            if (that.pageNum == '') that.GLOBAL.setWordCloud(detail.word_cloud_path);
-                        }
-                    }
-                    if (that.pageNum == '') that.pageNum = 1;
-                    window.scrollTo(0, 0);
-                }, function (res) {
-                    console.log(res);
-                });
-            }
-        },
-        search: function search(item, content) {
-            if (item == "") {
-                alert("请输入搜索类型");
-                return;
-            }
-            if (content == "") return;
-            this.pageNum = '';
-            var that = this;
-
-            this.$router.push({
-                query: {
-                    search_content: content,
-                    search_type: item
-                }
-            });
-            console.log("item + " + item + "; search + " + content);
-            this.getSearchDetails(item, content);
-        },
-        change_page: function change_page(value) {
-
-            this.pageNum = value;
-            this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
-        }
-    },
-    computed: {}
-
-});
-
-/***/ }),
-
-/***/ 28:
+/***/ 369:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(518)
+__webpack_require__(859)
 
-var Component = __webpack_require__(5)(
+var Component = __webpack_require__(70)(
   /* script */
-  __webpack_require__(250),
+  __webpack_require__(591),
   /* template */
-  __webpack_require__(533),
+  __webpack_require__(877),
   /* scopeId */
   "data-v-5dd27f4d",
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\专家科技成果平台\\frontend\\src\\views\\search_detail.vue"
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\search_detail.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] search_detail.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -287,7 +39,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 46:
+/***/ 385:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -328,31 +80,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 47:
+/***/ 388:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 48:
+/***/ 389:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(47)
+__webpack_require__(388)
 
-var Component = __webpack_require__(5)(
+var Component = __webpack_require__(70)(
   /* script */
-  __webpack_require__(46),
+  __webpack_require__(385),
   /* template */
-  __webpack_require__(49),
+  __webpack_require__(390),
   /* scopeId */
   "data-v-14f43d51",
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\专家科技成果平台\\frontend\\src\\views\\cookieUtil.vue"
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\cookieUtil.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] cookieUtil.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -374,7 +126,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 49:
+/***/ 390:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -390,12 +142,12 @@ if (false) {
 
 /***/ }),
 
-/***/ 50:
+/***/ 391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(389);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__);
 //
 //
@@ -560,38 +312,31 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 51:
+/***/ 392:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 518:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 52:
+/***/ 393:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(51)
+__webpack_require__(392)
 
-var Component = __webpack_require__(5)(
+var Component = __webpack_require__(70)(
   /* script */
-  __webpack_require__(50),
+  __webpack_require__(391),
   /* template */
-  __webpack_require__(53),
+  __webpack_require__(394),
   /* scopeId */
   "data-v-3baacb0e",
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\专家科技成果平台\\frontend\\src\\views\\menuBar.vue"
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\menuBar.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] menuBar.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -613,7 +358,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 53:
+/***/ 394:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -860,7 +605,269 @@ if (false) {
 
 /***/ }),
 
-/***/ 533:
+/***/ 407:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "d4c0a1aaae1dba8d0c5d074236d58897.png";
+
+/***/ }),
+
+/***/ 591:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menuBar_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+// import Button from "../../dist/vendors";
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        // Button,
+        MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a
+    },
+    name: "search_paper",
+    data: function data() {
+        return {
+            modal1: false,
+            wordcloud_modal: false,
+            // wordcloud_path: '',
+            wordcloud_show: false,
+            index_url: '/',
+            register_url: '/register',
+            identity: this.GLOBAL.userType,
+            theme1: 'primary',
+            search_results: [],
+            type: '',
+            pageNum: '',
+            totalNum: 0
+        };
+    },
+    created: function created() {
+        this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
+    },
+
+    methods: {
+        check_word_cloud: function check_word_cloud() {
+            this.wordcloud_modal = true;
+        },
+        quit_word_cloud: function quit_word_cloud() {
+            this.wordcloud_modal = false;
+        },
+        getSearchDetails: function getSearchDetails(item, content) {
+            this.wordcloud_show = false;
+            var that = this;
+            console.log("get: item + " + item + "; content + " + content + "; pageNum + " + this.pageNum);
+            if (this.$route.query.advance_data) {
+                var params = { 'keyw_and': this.$route.query.advance_data.and,
+                    'keyw_or': this.$route.query.advance_data.or,
+                    'keyw_not': this.$route.query.advance_data.none,
+                    'title': content,
+                    'author': this.$route.query.advance_writer,
+                    'journal': this.$route.query.advance_book,
+                    'start_time': this.$route.query.advance_time[0],
+                    'end_time': this.$route.query.advance_time[1],
+                    'page_num': this.pageNum
+                };
+                this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_paper_nb", params).then(function (res) {
+                    console.log(res);
+                    var detail = JSON.parse(res.body);
+                    console.log(detail);
+                    that.search_results = detail.msg;
+                    that.type = item;
+                    that.wordcloud_show = true;
+                    if (that.pageNum == '') that.GLOBAL.setWordCloud(detail.word_cloud_path);
+                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
+                    if (detail.total_count != 0) that.totalNum = detail.total_count;
+                    if (that.pageNum == '') that.pageNum = 1;
+
+                    window.scrollTo(0, 0);
+                }, function (res) {
+                    console.log(res);
+                });
+            } else if (this.$route.query.extra_org_name) {
+                var _params = { 'organization_name': this.$route.query.extra_org_name, 'professor_name': content };
+                this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_professor_nb", _params).then(function (res) {
+                    console.log(res);
+                    var detail = JSON.parse(res.body);
+                    console.log(detail);
+                    that.search_results = detail.msg;
+                    that.type = item;
+                    that.wordcloud_show = false;
+                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
+                    if (detail.total_count != 0) that.totalNum = detail.total_count;
+                    if (that.pageNum == '') that.pageNum = 1;
+
+                    window.scrollTo(0, 0);
+                }, function (res) {
+                    console.log(res);
+                });
+            } else {
+                var param = { 'page_num': this.pageNum };
+                console.log(param);
+                this.$http.get(this.GLOBAL.domain + "/api/v1/search_" + item + "/" + content, { params: param }).then(function (res) {
+                    var detail = JSON.parse(res.body);
+                    console.log("search success");
+                    console.log(detail);
+                    that.search_results = detail.msg;
+                    that.type = item;
+                    console.log(that.GLOBAL.wordcloud_path);
+                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
+                    if (item == 'paper' || item == 'organization') {
+                        that.totalNum = detail.count;
+                        if (item == 'paper') {
+                            that.wordcloud_show = true;
+                            if (that.pageNum == '') that.GLOBAL.setWordCloud(detail.word_cloud_path);
+                        }
+                    }
+                    if (that.pageNum == '') that.pageNum = 1;
+                    window.scrollTo(0, 0);
+                }, function (res) {
+                    console.log(res);
+                });
+            }
+        },
+        search: function search(item, content) {
+            if (item == "") {
+                alert("请输入搜索类型");
+                return;
+            }
+            if (content == "") return;
+            this.pageNum = '';
+            var that = this;
+
+            this.$router.push({
+                query: {
+                    search_content: content,
+                    search_type: item
+                }
+            });
+            console.log("item + " + item + "; search + " + content);
+            this.getSearchDetails(item, content);
+        },
+        change_page: function change_page(value) {
+
+            this.pageNum = value;
+            this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
+        }
+    },
+    computed: {}
+
+});
+
+/***/ }),
+
+/***/ 859:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 877:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1026,7 +1033,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }, [_c('img', {
       attrs: {
-        "src": __webpack_require__(66),
+        "src": __webpack_require__(407),
         "alt": "图片",
         "width": "64",
         "height": "64"
@@ -1127,13 +1134,6 @@ if (false) {
      require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-5dd27f4d", module.exports)
   }
 }
-
-/***/ }),
-
-/***/ 66:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "d4c0a1aaae1dba8d0c5d074236d58897.png";
 
 /***/ })
 

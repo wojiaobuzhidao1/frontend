@@ -1,8 +1,10 @@
 <template>
-<div> <MenuBar></MenuBar>
+	<div> 
+		<MenuBar>
+		</MenuBar>
     <div class="layout-content">
         <br>
-        <p style="font-size: 40px;">欢迎注册 Zebra Science</p>
+        <p style="font-size: 40px;">欢迎注册Science Searching Gate</p>
         <br>
         <div class="layout-content-main">
             <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="100">
@@ -29,16 +31,22 @@
             </Form>
         </div>
     </div>
+		<div class="ftCon">
+        <AboutUs></AboutUs>
+    </div>
   </div>
+	
 </template>
 
 <script>
+		import AboutUs from './aboutUs.vue'
     import MenuBar from './menuBar.vue'
 
     export default {
         name: "register",
         components:{
-            MenuBar
+						MenuBar,
+						AboutUs
         },
         data () {
             return {
@@ -154,7 +162,6 @@
 <style scoped>
     .layout-content{
         min-height: 480px;
-        margin: 40px;
         padding-left: 30%;
         overflow: hidden;
         background: #fff;
@@ -162,15 +169,10 @@
         width: 100%;
      
         padding-top: 5%;
-        margin-bottom: 5%;
         border-radius: 4px;
     }
     .input-select-class {
         width: 200px;
-        padding-bottom:5px;
-    }
-    .layout-content-main{
-        padding: 40px;
     }
      .ivu-menu-primary{
       background:#515a6e
@@ -178,4 +180,17 @@
       .ivu-btn-primary{
         background: #1e7fb8;
       }
+			.ftCon {
+            width: 100%;
+            height: 80px;
+            line-height: 24px;
+            text-align: center;
+            z-index: 10;
+            overflow: hidden;
+            bottom: 0;
+            position: absolute;
+            background: #515a6e;
+            color: #bbb;
+            font-size: 13px;
+        }
 </style>

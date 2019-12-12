@@ -1,71 +1,6 @@
-<style scoped lang="less">
-    .index{
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-        h1{
-            height: 130px;
-            img{
-                height: 100%;
-            }
-        }
-        h2{
-            color: #666;
-            margin-bottom: 30px;
-            p{
-                width: 100%;
-                margin: 0 0 50px;
-            }
-        }
-        .ivu-row-flex{
-            height: 100%;
-        }
-        #ftCon {
-            width: 100%;
-            height: 24px;
-            line-height: 24px;
-            text-align: center;
-            z-index: 10;
-            overflow: hidden;
-            bottom: 0;
-            position: absolute;
-            background: #e9e9e9;
-            color: #bbb;
-            font-size: 13px;
-        }
-    }
-
-    .advance_item{
-        display: inline;
-        align-items: center;
-    }
-
-    .extra-item{
-        font-size: 16px;
-        line-height: 32px;
-        padding-top: 10px;
-    }
-
-    .extra-input{
-        width: 20%;
-        margin-right: 3px
-    }
-    .ivu-modal-header{
-      align-items: center;
-    }
-    .ivu-modal-content{
-       width: 20px;
-       font-size: 15px;
-       margin-left: 10%;
-       align-items: center;
-    }
-</style>
 <template>
     <div class="index">
-        <Dropdown v-if="identity != 'VISITOR'" placement="bottom-start" style="margin-left: 88%; margin-top: 1%; font-size: 14px">
+        <Dropdown v-if="identity != 'VISITOR'" placement="bottom-start" style="margin-left: 88%; margin-top: 1%; font-size: 14px; background: #515a6e">
             <a style="color: black">
                 <Icon type="ios-contact"></Icon>
                 {{this.GLOBAL.userName}}
@@ -89,11 +24,11 @@
         <Row type="flex" justify="center" align="middle" style="height: 70%">
             <Col span="24" offset="">
                 <h1>
-                    <img src="../images/zebra.png" style="height: 180px">
+                    <img src="../images/timg.jpg" style="height: 180px">
                 </h1>
-                <br><br>
+                <br><br><br><br><br><br>
                 <h2>
-                    <p>Welcome to Zebra Science!</p>
+                    <p>Welcome to Science Searching Gate!</p>
                 </h2>
                 <Input style="width: 50%; margin-left: 25%" v-model="search_content" @keyup.enter.native="search">
                     <Select v-model="search_item" slot="prepend" style="width: 80px;background-color: #515a6e;color: white">
@@ -101,7 +36,7 @@
                         <Option value="paper"><b>论文</b></Option>
                         <Option value="organization"><b>机构</b></Option>
                     </Select>
-                    <Button  @click="search"  slot="append" ><img v-if="and_times<4" src="../images/search.jpg" @click="and_times++" height="20" width="20" style="vertical-align:middle"></Button>
+                    <Button  @click="search"  slot="append" ><img v-if="and_times<4" src="../images/search.jpg" @click="and_times++" height="20" width="23" style="vertical-align:middle"></Button>
                     <Button v-if="search_item=='paper'" @click="advance=!advance"  slot="append" >高级检索↓</Button>
                     <Button v-if="search_item=='professor'" @click="extra_org=!extra_org"  slot="append" >所在机构↓</Button>
                 </Input>
@@ -163,14 +98,17 @@
         <!--<router-link :to="certify_url">申请认证</router-link>-->
         <!--<router-link :to="setting_url">信息设置</router-link>-->
         <div id="ftCon">
-            2019-2019 &copy; ZebraScience
-            <router-link :to="{path: '/aboutUs'}">联系我们</router-link>
+            <AboutUs></AboutUs>
         </div>
     </div>
 </template>
 <script>
+		import AboutUs from './aboutUs.vue'
     import CookieUtil from './cookieUtil.vue'
     export default {
+				components:{
+            AboutUs
+        },
         data () {
             return {
                 modal1: false,
@@ -355,3 +293,69 @@
         }
     }
 </script>
+
+<style scoped lang="less">
+    .index{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        h1{
+            height: 130px;
+            img{
+                height: 100%;
+            }
+        }
+        h2{
+            color: #666;
+            margin-bottom: 30px;
+            p{
+                width: 100%;
+                margin: 0 0 50px;
+            }
+        }
+        .ivu-row-flex{
+            height: 100%;
+        }
+        #ftCon {
+            width: 100%;
+            height: 80px;
+            line-height: 24px;
+            text-align: center;
+            z-index: 10;
+            overflow: hidden;
+            bottom: 0;
+            position: absolute;
+            background: #515a6e;
+            color: #bbb;
+            font-size: 13px;
+        }
+    }
+
+    .advance_item{
+        display: inline;
+        align-items: center;
+    }
+
+    .extra-item{
+        font-size: 16px;
+        line-height: 32px;
+        padding-top: 10px;
+    }
+
+    .extra-input{
+        width: 20%;
+        margin-right: 3px
+    }
+    .ivu-modal-header{
+      align-items: center;
+    }
+    .ivu-modal-content{
+       width: 20px;
+       font-size: 15px;
+       margin-left: 10%;
+       align-items: center;
+		}
+</style>

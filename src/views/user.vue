@@ -156,18 +156,20 @@
                     </TabPane>
                 </Tabs>
             </Content>
-            <Footer class="layout-footer-center" style="background-color: #666666; color: #eeeeee;">
-                2019-2019 &copy; ZebraScience
-                <router-link :to="{path:'/aboutUs'}" style="margin-left: 20px; color: #eeeeee">联系我们</router-link>            </Footer>
+            <Footer class="layout-footer-center" style="background-color: #515a6e; color: #515a6e;">
+							<AboutUs></AboutUs>
+            </Footer>
         </Layout>
     </div>
 </template>
 
 <script>
-    import MenuBar from './menuBar.vue'
+		import MenuBar from './menuBar.vue'
+		import AboutUs from './aboutUs.vue'
     export default {
         components:{
-            MenuBar
+						MenuBar,
+						AboutUs
         },
         name: 'user',
         data () {

@@ -15,10 +15,7 @@
   "author": "Aresn",
   "license": "MIT",
   "dependencies": {
-<<<<<<< HEAD
     "echarts": "^4.5.0",
-=======
->>>>>>> 020fa38a4a1fea87bda5bf10d3525a77b96ff794
     "iview": "^3.0.0",
     "vue": "^2.5.16",
     "vue-router": "^2.8.1"

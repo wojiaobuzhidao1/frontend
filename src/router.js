@@ -67,14 +67,6 @@ const routers = [
             title: '设置'
         },
         component: (resolve) => require(['./views/setting.vue'], resolve)
-    },
-    {
-        path: '/aboutUs',
-        name: 'aboutUs',
-        meta: {
-            title: '关于我们'
-        },
-        component: (resolve) => require(['./views/aboutUs.vue'], resolve)
-    },
+    }
 ];
 export default routers;
