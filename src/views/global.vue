@@ -6,7 +6,7 @@
 
     export default {
         domain:'http://qsz.lkc1621.xyz',
-        // domain:'127.0.0.1:5000',
+        // domain:'10.251.254.55',
         name: "global",
         userID: '',
         userName: '',
