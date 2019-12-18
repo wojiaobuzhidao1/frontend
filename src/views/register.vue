@@ -31,9 +31,7 @@
             </Form>
         </div>
     </div>
-		<div class="ftCon">
-        <AboutUs></AboutUs>
-    </div>
+	
   </div>
 	
 </template>

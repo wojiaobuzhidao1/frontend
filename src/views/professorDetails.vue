@@ -22,7 +22,7 @@
 }
 
 .liked{
-    background-color: #2d8cf0;
+    background-color: #8DB6CD;
     color: white;
 }
 

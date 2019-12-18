@@ -5,7 +5,7 @@
 <script>
 
     export default {
-        domain:'http://qsz.lkc1621.xyz',
+        domain:'http://10.251.252.55:5000',
         // domain:'10.251.254.55',
         name: "global",
         userID: '',
@@ -14,7 +14,7 @@
         password: '', // Just For Test
         userType: 'VISITOR',
         wordcloud_path: '',
-        avatar: 'http://qsz.lkc1621.xyz/static/photo/1559356265_img.png',
+        avatar: 'http://10.251.252.55:5000/static/photo/1559356265_img.png',
         collectList: [
             // {
             //     name: 'This is Paper Title One This is Paper Title One This is Paper Title One This is Paper Title One',

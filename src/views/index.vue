@@ -1,6 +1,6 @@
 <template>
     <div class="index">
-        <Dropdown v-if="identity != 'VISITOR'" placement="bottom-start" style="margin-left: 88%; margin-top: 1%; font-size: 14px; background: #515a6e">
+        <Dropdown v-if="identity != 'VISITOR'" placement="bottom-start" style="margin-left: 88%; margin-top: 1%; font-size: 14px; background: #ffffff">
             <a style="color: black">
                 <Icon type="ios-contact"></Icon>
                 {{this.GLOBAL.userName}}
@@ -333,7 +333,9 @@
             font-size: 13px;
         }
     }
-
+    .element.style{
+      background: #ffffff;
+    }
     .advance_item{
         display: inline;
         align-items: center;

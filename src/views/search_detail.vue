@@ -123,6 +123,8 @@
                 type: '',
                 pageNum: '',
                 totalNum: 0,
+                
+                
             }
         },
         created() {
@@ -138,6 +140,7 @@
             getSearchDetails(item, content) {
                 this.wordcloud_show = false;
                 var that = this;
+            
                 console.log("get: item + " + item + "; content + " + content + "; pageNum + " + this.pageNum);
                 if(this.$route.query.advance_data)
                 {
@@ -151,7 +154,7 @@
                         'end_time': this.$route.query.advance_time[1],
                         'page_num': this.pageNum
                     }
-                    this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_paper_nb", params).then(function (res) {
+                    this.$http.post("10.251.252.55:5000/api/v1/search_paper_nb", params).then(function (res) {
                         console.log(res)
                         var detail = JSON.parse(res.body);
                         console.log(detail);
@@ -175,7 +178,7 @@
                 else if(this.$route.query.extra_org_name)
                 {
                     let params = {'organization_name': this.$route.query.extra_org_name, 'professor_name': content}
-                    this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_professor_nb",params).then(function (res) {
+                    this.$http.post("10.251.252.55:5000/api/v1/search_professor_nb",params).then(function (res) {
                         console.log(res)
                         var detail = JSON.parse(res.body);
                         console.log(detail);
