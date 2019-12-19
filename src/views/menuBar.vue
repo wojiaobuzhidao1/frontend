@@ -34,7 +34,7 @@
             </Modal>
         </MenuItem>
         <a style="float: right">
-            <MenuItem name="4">
+            <MenuItem v-if="identity == 'VISITOR'" @click.native="modal1=true" name="4">
                 <a @click="jump_register" style="size: 35px; color: #ffffff">
 									注册
 								</a>
@@ -96,7 +96,7 @@
                         this.GLOBAL.setCollectList(s["msg"]["star_list"]);
                         this.star_paper_items = this.GLOBAL.collectList;
                         console.log('Test --------------------'+s.msg.avatar);
-                        console.log(this.GLOBAL.avatar);
+                        console.log('hello```````'+this.GLOBAL.avatar);
                         if(s["msg"]["avatar"] != '' && s["msg"]["avatar"]!=null){
                             console.log('avatarYes ' + this.GLOBAL.avatar);
                             this.GLOBAL.setAvatar(s["msg"]["avatar"]);

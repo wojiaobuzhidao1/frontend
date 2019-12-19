@@ -180,26 +180,26 @@
                 pageNum_M: 1,
                 pageNum_S: 1,
                 pageSize: 10,
-                // my_paper_items: [
-                //     {
-                //         name: 'This is Paper Title One This is Paper Title One This is Paper Title One This is Paper Title One',
-                //         year: '2018',
-                //         author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
-                //         source_journal: {
-                //             name: 'This is Paper Source',
-                //             date: 2018,
-                //         }
-                //     },
-                //     {
-                //         name: 'This is Paper Title One',
-                //         year: '2018',
-                //         author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
-                //         source_journal: {
-                //             name: 'This is Paper Source',
-                //             date: 2019,
-                //         }
-                //     },
-                // ],
+                my_paper_items: [
+                     {
+                         name: 'This is Paper Title One This is Paper Title One This is Paper Title One This is Paper Title One',
+                         year: '2018',
+                         author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+                         source_journal: {
+                             name: 'This is Paper Source',
+                             date: 2018,
+                         }
+                     },
+                     {
+                         name: 'This is Paper Title One',
+                         year: '2018',
+                         author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+                         source_journal: {
+                             name: 'This is Paper Source',
+                             date: 2019,
+                         }
+                     },
+                 ],
                 my_paper_items: this.GLOBAL.paperList,
                 my_paper_num: 0,
                 star_paper_items: this.GLOBAL.collectList,
@@ -226,13 +226,13 @@
                 })
             },
             change_page_S (value) {
-                this.pageNum_S = value;
+                this.pageNum_S = parseInt(value);
                 console.log(this.pageNum_S);
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             },
             change_page_M (value) {
-                this.pageNum_M = value;
+                this.pageNum_M = parseInt(value);
                 console.log(this.pageNum_M);
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;

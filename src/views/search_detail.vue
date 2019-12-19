@@ -89,7 +89,7 @@
 
             </div>
             <div v-if="this.$route.query.search_type == 'paper' || this.$route.query.search_type == 'organization'" style="margin: 3% 20% 10% 0">
-                <Page :current="pageNum" :total="totalNum" :page-size=10 @on-change="change_page" simple style="text-align: center;"/>
+                <Page :current= parseInt(pageNum) :total="totalNum" :page-size=10 @on-change= parseInt(change_page) simple style="text-align: center;"/>
             </div>
             <BackTop :height="100" :bottom="200">
                 <Icon type="md-arrow-up" class="top"/>
@@ -121,9 +121,9 @@
                 theme1: 'primary',
                 search_results: [],
                 type: '',
-                pageNum: '',
+                pageNum: 0,
                 totalNum: 0,
-                
+               
                 
             }
         },
@@ -154,7 +154,7 @@
                         'end_time': this.$route.query.advance_time[1],
                         'page_num': this.pageNum
                     }
-                    this.$http.post("10.251.252.55:5000/api/v1/search_paper_nb", params).then(function (res) {
+                    this.$http.post(this.GLOBAL.domain + "/api/v1/search_paper_nb", params).then(function (res) {
                         console.log(res)
                         var detail = JSON.parse(res.body);
                         console.log(detail);
@@ -167,7 +167,7 @@
                             alert(detail.reason);
                         if (detail.total_count != 0)
                             that.totalNum = detail.total_count;
-                        if (that.pageNum == '')
+                        if (that.pageNum == 0)
                             that.pageNum = 1;
 
                         window.scrollTo(0, 0);
@@ -178,7 +178,7 @@
                 else if(this.$route.query.extra_org_name)
                 {
                     let params = {'organization_name': this.$route.query.extra_org_name, 'professor_name': content}
-                    this.$http.post("10.251.252.55:5000/api/v1/search_professor_nb",params).then(function (res) {
+                    this.$http.post(this.GLOBAL.domain + "/api/v1/search_professor_nb",params).then(function (res) {
                         console.log(res)
                         var detail = JSON.parse(res.body);
                         console.log(detail);
@@ -189,7 +189,7 @@
                             alert(detail.reason);
                         if (detail.total_count != 0)
                             that.totalNum = detail.total_count;
-                        if (that.pageNum == '')
+                        if (that.pageNum == 0)
                             that.pageNum = 1;
 
                         window.scrollTo(0, 0);
@@ -250,7 +250,7 @@
             },
             change_page(value) {
 
-                this.pageNum = value;
+                this.pageNum = parseInt(value);
                 this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
             },
         },

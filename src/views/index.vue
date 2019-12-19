@@ -91,12 +91,6 @@
                 </div>
             </Col>
         </Row>
-        <!--<router-link :to="{path: '/professorDetails',query:{profID: 'CN-BQ73PUWJ'}}">专家详情</router-link>-->
-        <!--<router-link :to="user_url">个人主页</router-link>-->
-        <!--<router-link :to="paperDetails_url">论文详情</router-link>-->
-        <!--<router-link :to="news_url">消息界面</router-link>-->
-        <!--<router-link :to="certify_url">申请认证</router-link>-->
-        <!--<router-link :to="setting_url">信息设置</router-link>-->
         <div id="ftCon">
             <AboutUs></AboutUs>
         </div>
@@ -248,11 +242,6 @@
                 }
                 else if (this.search_item == 'professor' && this.extra_org)
                 {
-                    // if(this.extra_org_name == '')
-                    // {
-                    //     alert("请输入所在机构");
-                    //     return;
-                    // }
                     this.$router.push({
                         name: 'search_detail',
                         query:{

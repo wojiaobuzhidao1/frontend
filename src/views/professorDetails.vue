@@ -1,60 +1,4 @@
-<style scoped>
-.userpage{
-    /*border: 1px solid #d7dde4;*/
-    background-color: white;
-    position: relative;
-    border-radius: 4px;
-    overflow: hidden;
-    min-width: 700px;
-}
 
-.ivu-layout{
-    background-color: white;
-}
-
-#layout{
-    margin-top: 60px;
-    padding-top: 40px;
-}
-
-.layout-footer-center{
-    text-align: center;
-}
-
-.liked{
-    background-color: #8DB6CD;
-    color: white;
-}
-
-.user-intro{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-}
-
-.professor-detail{
-    margin-bottom: 30px;
-}
-
-.paper-detail{
-    margin-top: 3px;
-    margin-bottom: 10px;
-    /*font-family: 华文中宋;*/
-    font-size: 18px;
-    border-bottom: dashed #8391a5 1px;
-    padding-bottom: 10px;
-}
-
-.relevant-detail{
-    font-size: 14px;
-    margin-bottom: 6px;
-    border-bottom: dashed #8391a5 1px;
-    /*border-radius: 5px;*/
-    padding: 3px;
-    min-width: 30%;
-}
-
-</style>
 
 <template>
     <div class="userpage">
@@ -178,84 +122,7 @@
                 pageSize: 10,
                 got_paper_num: 1,
                 isRouterAlive: true,
-                paper_items: [
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One This is Paper Title One This is Paper Title One This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾 郭子溢 黎昆昌 许志达 何浩乾 郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source This is Paper Source This is Paper Source'
-                        }
-                    },
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source'
-                        }
-                    },
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source'
-                        }
-                    },
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source'
-                        }
-                    },
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source'
-                        }
-                    },
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source'
-                        }
-                    },
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source'
-                        }
-                    },
-                    {
-                        paper_detail: {
-                            title: 'This is Paper Title One',
-                            year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
-                            source: 'This is Paper Source'
-                        }
-                    },
-                ],
-                coop_sch: [
-                    { message: '郭子溢' },
-                    { message: '黎昆昌' },
-                    { message: '许志达' },
-                    { message: '何浩乾' }
-                ],
-                coop_org: [
-                    { message: '北大' },
-                    { message: '清华' },
-                    { message: '北航' },
-                    { message: '北师' }
-                ]
+                paper_items: []
             }
         },
         methods:{
@@ -379,7 +246,7 @@
                 })
             },
             change_page (value) {
-                this.pageNum = value;
+                this.pageNum = parseInt(value);
                 console.log(this.pageNum);
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
@@ -411,5 +278,59 @@
 </script>
 
 <style scoped>
+.userpage{
+    /*border: 1px solid #d7dde4;*/
+    background-color: white;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 700px;
+}
+
+.ivu-layout{
+    background-color: white;
+}
+
+#layout{
+    margin-top: 60px;
+    padding-top: 40px;
+}
+
+.layout-footer-center{
+    text-align: center;
+}
+
+.liked{
+    background-color: #8DB6CD;
+    color: white;
+}
+
+.user-intro{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.professor-detail{
+    margin-bottom: 30px;
+}
+
+.paper-detail{
+    margin-top: 3px;
+    margin-bottom: 10px;
+    /*font-family: 华文中宋;*/
+    font-size: 18px;
+    border-bottom: dashed #8391a5 1px;
+    padding-bottom: 10px;
+}
+
+.relevant-detail{
+    font-size: 14px;
+    margin-bottom: 6px;
+    border-bottom: dashed #8391a5 1px;
+    /*border-radius: 5px;*/
+    padding: 3px;
+    min-width: 30%;
+}
 
 </style>

@@ -1,25 +1,25 @@
 webpackJsonp([6],{
 
-/***/ 370:
+/***/ 363:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(866)
+__webpack_require__(857)
 
 var Component = __webpack_require__(70)(
   /* script */
-  __webpack_require__(592),
+  __webpack_require__(587),
   /* template */
-  __webpack_require__(882),
+  __webpack_require__(872),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\setting.vue"
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\certify.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] setting.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] certify.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -28,9 +28,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d43186d6", Component.options)
+    hotAPI.createRecord("data-v-126a149d", Component.options)
   } else {
-    hotAPI.reload("data-v-d43186d6", Component.options)
+    hotAPI.reload("data-v-126a149d", Component.options)
   }
 })()}
 
@@ -39,7 +39,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 385:
+/***/ 386:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80,25 +80,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 388:
+/***/ 387:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 389:
+/***/ 388:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(388)
+__webpack_require__(387)
 
 var Component = __webpack_require__(70)(
   /* script */
-  __webpack_require__(385),
+  __webpack_require__(386),
   /* template */
-  __webpack_require__(390),
+  __webpack_require__(389),
   /* scopeId */
   "data-v-14f43d51",
   /* cssModules */
@@ -126,7 +126,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 390:
+/***/ 389:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -142,13 +142,37 @@ if (false) {
 
 /***/ }),
 
+/***/ 390:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "aboutUs"
+});
+
+/***/ }),
+
 /***/ 391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__);
+//
+//
 //
 //
 //
@@ -207,7 +231,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             modal1: false,
             theme1: 'primary',
             index_url: '/',
-            register_url: '/register',
             email: '',
             password: '',
             identity: this.GLOBAL.userType,
@@ -287,6 +310,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         setting: function setting() {
             this.$router.push({ path: '/setting' });
         },
+        jump_register: function jump_register() {
+            this.$router.push({ path: '/register' });
+        },
         logout: function logout() {
             this.GLOBAL.setUserType('VISITOR');
             this.identity = this.GLOBAL.userType;
@@ -320,6 +346,52 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ }),
 
 /***/ 393:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 394:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(393)
+
+var Component = __webpack_require__(70)(
+  /* script */
+  __webpack_require__(390),
+  /* template */
+  __webpack_require__(397),
+  /* scopeId */
+  "data-v-41345060",
+  /* cssModules */
+  null
+)
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\aboutUs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] aboutUs.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-41345060", Component.options)
+  } else {
+    hotAPI.reload("data-v-41345060", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 395:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -330,7 +402,7 @@ var Component = __webpack_require__(70)(
   /* script */
   __webpack_require__(391),
   /* template */
-  __webpack_require__(394),
+  __webpack_require__(396),
   /* scopeId */
   "data-v-3baacb0e",
   /* cssModules */
@@ -358,11 +430,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 394:
+/***/ 396:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('Menu', {
+    staticClass: "menutype",
     staticStyle: {
       "width": "100%",
       "position": "fixed"
@@ -388,7 +461,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-home",
       "size": "20"
     }
-  }), _vm._v("\n            首页\n        ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
+  }), _vm._v("\n                首页\n            ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
     attrs: {
       "name": "5"
     }
@@ -466,7 +539,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-contact",
       "size": "20"
     }
-  }), _vm._v("\n            " + _vm._s(this.GLOBAL.userName) + "\n        ")], 1), _vm._v(" "), _c('MenuItem', {
+  }), _vm._v("\n                " + _vm._s(this.GLOBAL.userName) + "\n            ")], 1), _vm._v(" "), _c('MenuItem', {
     attrs: {
       "name": "2-1"
     },
@@ -514,7 +587,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.modal1 = true
       }
     }
-  }, [_vm._v("\n        登录\n        "), _c('Modal', {
+  }, [_vm._v("\n            登录\n            "), _c('Modal', {
     attrs: {
       "title": "登录",
       "ok-text": "登录",
@@ -584,16 +657,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })])])], 1) : _vm._e(), _vm._v(" "), _c('a', {
     staticStyle: {
       "float": "right"
-    },
-    attrs: {
-      "href": _vm.register_url
     }
-  }, [(_vm.identity == 'VISITOR') ? _c('MenuItem', {
+  }, [_c('MenuItem', {
     attrs: {
-      "href": _vm.register_url,
       "name": "4"
     }
-  }, [_vm._v("\n            注册\n        ")]) : _vm._e()], 1)], 1)
+  }, [_c('a', {
+    staticStyle: {
+      "size": "35px",
+      "color": "#ffffff"
+    },
+    on: {
+      "click": _vm.jump_register
+    }
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t注册\n\t\t\t\t\t\t\t\t")])])], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -605,16 +682,55 @@ if (false) {
 
 /***/ }),
 
-/***/ 592:
+/***/ 397:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "aboutUs",
+    staticStyle: {
+      "background": "#515a6e",
+      "height": "80px"
+    }
+  }, [_c('span', {
+    staticStyle: {
+      "font-size": "16px"
+    }
+  }, [_c('a', {
+    staticStyle: {
+      "color": "#ffffff"
+    }
+  }, [_vm._v("科技资源共享平台")])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('span', {
+    staticStyle: {
+      "font-size": "14px"
+    }
+  }, [_c('a', {
+    staticStyle: {
+      "color": "#ffffff"
+    }
+  }, [_vm._v("联系我们：1137559912@qq.com")])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-41345060", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 587:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(395);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menuBar_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload__);
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__aboutUs_vue__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__aboutUs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__aboutUs_vue__);
 //
 //
 //
@@ -692,210 +808,142 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
         MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a,
-        'my-upload': __WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload___default.a
+        AboutUs: __WEBPACK_IMPORTED_MODULE_1__aboutUs_vue___default.a
     },
-    name: "setting",
+    name: "certify",
     data: function data() {
-        var _this = this;
-
         return {
-            previewImageSrc: '',
-            userName: '',
             identity: this.GLOBAL.userType,
-            //identity:'EXPERT', //EXPERT USER VISITOR
-            //old_pwd:'123',
-            //change_pwd: false,
-            show: false,
-            upload_url: this.GLOBAL.domain + '/api/v1/upload_avatar',
-            params: {
-                token: '123456798',
-                name: 'avatar'
+            same_name: false,
+            modal1: false,
+            profID: '',
+            showedMessage: '正在检测同名专家...',
+            formValidate: {
+                name: '',
+                id_num: '',
+                field: '',
+                organization: '',
+                else_info: ''
             },
-            headers: {
-                smail: '*_~'
+            ruleValidate: {
+                name: [{ required: true, message: '真实姓名不能为空', trigger: 'blur' }],
+                id_num: [{ required: true, message: '身份证号码不能为空', trigger: 'blur' }],
+                field: [{ required: true, message: '研究领域不能为空', trigger: 'blur' }],
+                organization: [{ required: true, message: '所属机构不能为空', trigger: 'blur' }]
             },
-            imgDataUrl: this.GLOBAL.avatar, // the datebase64 url of created image
-            change_name: {
-                name: ''
-            },
-            change_pwd: {
-                old_password: '',
-                password: '',
-                cpwd: ''
-            },
-            change_name_rule: {
-                name: [{ required: true, message: '用户名不能为空', trigger: 'blur' }]
-            },
-            change_pwd_rule: {
-                old_password: [{ required: true, message: '旧密码不能为空', trigger: 'blur' }],
-                password: [{ required: true, message: '密码不能为空', trigger: 'blur' }],
-                cpwd: [{ required: true, message: '密码不能为空', trigger: 'blur' }, {
-                    validator: function validator(rule, value, callback) {
-                        if (value === '') {
-                            callback(new Error('请再次输入密码'));
-                        } else if (value !== _this.change_pwd.password) {
-                            callback(new Error('两次输入密码不一致'));
-                        } else {
-                            callback();
-                        }
-                    }, trigger: 'blur' }]
-            }
+            same_name_sch: ''
         };
     },
 
     methods: {
         handleSubmit: function handleSubmit(name) {
-            var _this2 = this;
+            var _this = this;
 
-            // console.log(name);
-            console.log(this.GLOBAL.userName);
             this.$refs[name].validate(function (valid) {
                 if (valid) {
-                    if (name === 'change_name') {
-                        console.log('if ' + _this2.change_name.name);
-                        // this.GLOBAL.setUserName(this.change_name.name);
-                        // console.log('this is ' + this.GLOBAL.userName)
-                        var params = { 'user_id': _this2.GLOBAL.email, 'username': _this2.change_name.name };
-                        _this2.$http.post(_this2.GLOBAL.domain + '/api/v1/information_change', params).then(function (res) {
-                            var detail = JSON.parse(res.body);
-                            console.log(detail);
-                            if (detail.state === 'success') {
-                                this.refresh_user_info();
-                                this.$Message.success('修改成功!');
-                            } else {
-                                this.$Message.error('修改失败!');
-                            }
-                        }, function (res) {
-                            console.log('Failed');
-                            var detail = JSON.parse(res.body);
-                            console.log(detail);
-                        });
-                    } else if (name === 'change_pwd') {
-                        console.log('else if');
-                        var _params = { 'user_id': _this2.GLOBAL.email, 'old_password': _this2.change_pwd.old_password, 'new_password': _this2.change_pwd.password };
-                        console.log(_params);
-                        _this2.$http.post(_this2.GLOBAL.domain + '/api/v1/password_change', _params).then(function (res) {
-                            var detail = JSON.parse(res.body);
-                            console.log(detail);
-                            if (detail.state === 'fail') {
-                                this.$Message.error(detail.reason);
-                            } else {
-                                this.$Message.success(detail.reason);
-                            }
-                        }, function (res) {
-                            console.log('Failed');
-                            var detail = JSON.parse(res.body);
-                            console.log(detail);
-                        });
-                    } else {
-                        console.log('else');
-                    }
-                    _this2.$refs[name].resetFields();
-                    // this.$Message.success('提交成功!')
+                    _this.$Message.success('提交成功!');
+                    console.log(_this.formValidate.name);
+                    //获取同名专家列表
+                    _this.same_name = true;
+                    _this.$http.get(_this.GLOBAL.domain + '/api/v1/common_name', { params: { 'professor_name': _this.formValidate.name } }).then(function (res) {
+                        this.same_name = true;
+                        var detail = JSON.parse(res.body);
+                        if (detail.state === 'fail') {
+                            this.showedMessage = detail.reason;
+                        } else {
+                            this.same_name_sch = detail.msg;
+                            this.showedMessage = '检测到同名专家，请选择您是哪一位';
+                        }
+                        console.log(detail);
+                    }, function (res) {
+                        console.log('Failed');
+                        var detail = JSON.parse(res.body);
+                        console.log(detail);
+                        this.$Message.info(detail);
+                    });
+                    // this.same_name = true;
+                    // this.$http.get(this.GLOBAL.domain + '/api/v1/search_professor/' + this.formValidate.name)
+                    //     .then(function (res) {
+                    //         //this.same_name = true;
+                    //         var detail = JSON.parse(res.body);
+                    //         if(detail.state === 'fail'){
+                    //             this.showedMessage = detail.reason;
+                    //         }
+                    //         else{
+                    //             this.same_name_sch = detail.msg;
+                    //             this.showedMessage = '检测到同名专家，请选择您是哪一位';
+                    //         }
+                    //         console.log(detail);
+                    //     },function (res) {
+                    //         console.log('Failed');
+                    //         var detail = JSON.parse(res.body);
+                    //         console.log(detail);
+                    //         this.$Message.info(detail);
+                    //     })
                 } else {
-                    _this2.$Message.error('表单验证失败!');
+                    _this.$Message.error('表单验证失败!');
                 }
             });
         },
         handleReset: function handleReset(name) {
-            if (this.identity !== 'EXPERT') this.$refs[name].resetFields();
+            this.$refs[name].resetFields();
         },
-        displayImage: function displayImage() {
-            var _this3 = this;
-
-            var file = this.$refs.fileInput.files[0];
-            var fr = new FileReader();
-            fr.onload = function (e) {
-                _this3.previewImageSrc = e.target.result;
-            };
-            fr.readAsDataURL(file);
-        },
-        upload: function upload() {
-            if (this.previewImageSrc == "") return;
-            alert("cxk");
-        },
-        refresh_user_info: function refresh_user_info() {
-            this.$http.get(this.GLOBAL.domain + '/api/v1/user_detail/' + this.GLOBAL.email).then(function (res) {
+        confirm_prof_id: function confirm_prof_id(id) {
+            this.profID = id;
+            console.log(id);
+            var form = this.formValidate;
+            var params = { 'email': this.GLOBAL.email, 'name': form.name, 'ID_num': form.id_num, 'field': form.field, 'text': form.else_info, 'scid': id };
+            console.log(params);
+            this.$http.get(this.GLOBAL.domain + '/api/v1/certification', { params: params }).then(function (res) {
+                console.log('SuccessFFF');
                 var detail = JSON.parse(res.body);
                 console.log(detail);
-                this.GLOBAL.setUserName(detail.msg.username);
-                this.GLOBAL.setAvatar(detail.msg.avatar);
+                if (detail.state == 'fail') {
+                    this.$Message.error(detail.reason);
+                } else {
+                    this.modal1 = true;
+                }
             }, function (res) {
-                console.log('Failed');
+                console.log("Failed");
                 var detail = JSON.parse(res.body);
                 console.log(detail);
             });
         },
-        toggleShow: function toggleShow() {
-            this.show = !this.show;
-        },
-        cropSuccess: function cropSuccess(imgDataUrl, field) {
-            console.log('-------- crop success --------');
-            this.imgDataUrl = imgDataUrl;
-        },
+        check_ok: function check_ok() {
+            var _this2 = this;
 
-        /**
-        * upload success
-        *
-        * [param] jsonData   服务器返回数据，已进行json转码
-        * [param] field
-        */
-        cropUploadSuccess: function cropUploadSuccess(jsonData, field) {
-            console.log('-------- upload success --------');
-            console.log(jsonData);
-            console.log('field: ' + field);
-            var detail = JSON.parse(jsonData);
-            console.log(detail.url);
-            if (detail.state == 'success') {
-                var params = { 'user_id': this.GLOBAL.email, 'avatar': detail.url };
-                this.$http.post(this.GLOBAL.domain + '/api/v1/information_change', params).then(function (res) {
-                    var detail = JSON.parse(res.body);
-                    console.log(detail);
-                    if (detail.state === 'success') {
-                        this.refresh_user_info();
-                        this.show = !this.show;
-                        this.$Message.success('修改成功!');
-                    } else {
-                        this.$Message.error('修改失败!');
-                    }
-                }, function (res) {
-                    console.log('Failed');
-                    var detail = JSON.parse(res.body);
-                    console.log(detail);
-                });
-            } else {
-                this.$Message.error('服务器出错，上传失败');
-            }
-        },
-
-        /**
-         * upload fail
-         *
-         * [param] status    server api return error status, like 500
-         * [param] field
-         */
-        cropUploadFail: function cropUploadFail(status, field) {
-            console.log('-------- upload fail --------');
-            console.log(status);
-            console.log('field: ' + field);
+            setTimeout(function () {
+                _this2.modal1 = false;
+                _this2.$Message.success('成功提交申请');
+            }, 300);
+            this.$router.push({
+                path: '/user'
+            });
         }
     }
 });
 
 /***/ }),
 
-/***/ 866:
+/***/ 857:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 882:
+/***/ 872:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('MenuBar', {
+  return _c('div', {
+    staticStyle: {
+      "background": "white"
+    }
+  }, [_c('MenuBar', {
+    staticStyle: {
+      "background": "#515a6e"
+    },
     on: {
       "user": function($event) {
         _vm.identity = 'USER'
@@ -910,157 +958,242 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.identity = 'ADMIN'
       }
     }
-  }), _vm._v(" "), _c('div', {
-    staticClass: "certify-detail"
+  }), _vm._v(" "), _c('Modal', {
+    attrs: {
+      "cancel-text": "取消",
+      "draggable": "",
+      "scrollable": "",
+      "title": "发送申请成功"
+    },
+    on: {
+      "on-cancel": _vm.check_ok
+    },
+    model: {
+      value: (_vm.modal1),
+      callback: function($$v) {
+        _vm.modal1 = $$v
+      },
+      expression: "modal1"
+    }
+  }, [_c('h3', [_vm._v("您已成功发送申请，请耐心等待管理员审核")]), _vm._v(" "), _c('div', {
+    attrs: {
+      "slot": "footer"
+    },
+    slot: "footer"
+  }, [_c('Button', {
+    attrs: {
+      "type": "primary"
+    },
+    on: {
+      "click": _vm.check_ok
+    }
+  }, [_vm._v("确定")])], 1)]), _vm._v(" "), _c('Layout', [_c('Content', [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.same_name),
+      expression: "same_name"
+    }],
+    staticClass: "same-name-expert"
+  }, [_c('h2', {
+    staticStyle: {
+      "margin-left": "30%"
+    }
+  }, [_vm._v(_vm._s(_vm.showedMessage))]), _vm._v(" "), _c('ul', {
+    staticStyle: {
+      "list-style-type": "none",
+      "margin-left": "5px",
+      "margin-top": "5px"
+    }
+  }, _vm._l((_vm.same_name_sch), function(item) {
+    return _c('li', {
+      staticStyle: {
+        "width": "40%",
+        "float": "left",
+        "margin-left": "20px",
+        "min-width": "320px"
+      }
+    }, [_c('div', {
+      staticStyle: {
+        "cursor": "pointer",
+        "margin": "5px",
+        "padding": "5px",
+        "border": "#2b85e4 solid 1px",
+        "border-radius": "5px",
+        "overflow": "hidden"
+      },
+      attrs: {
+        "onmouseover": "this.style.background = '#e7e7e7'",
+        "onmouseout": "this.style.background = '#ffffff'"
+      },
+      on: {
+        "click": function($event) {
+          return _vm.confirm_prof_id(item.scid)
+        }
+      }
+    }, [_c('Row', [_c('Col', {
+      staticStyle: {
+        "text-align": "center",
+        "overflow": "hidden",
+        "white-space": "nowrap",
+        "padding-top": "5px"
+      },
+      attrs: {
+        "span": "9"
+      }
+    }, [_c('div', {
+      staticClass: "relevant-detail"
+    }, [_c('b', [_vm._v(_vm._s(item.name))])]), _vm._v(" "), _c('Tag', {
+      attrs: {
+        "color": "blue"
+      }
+    }, [_vm._v("ID:" + _vm._s(item.scid))])], 1), _vm._v(" "), _c('Col', {
+      staticStyle: {
+        "font-size": "13px",
+        "overflow": "hidden",
+        "white-space": "nowrap"
+      },
+      attrs: {
+        "span": "14",
+        "offset": "1"
+      }
+    }, [_vm._v("\n                                            机构：" + _vm._s(item.mechanism)), _c('br'), _vm._v("\n                                            领域："), _vm._l((item.field), function(value) {
+      return _c('div', {
+        staticStyle: {
+          "display": "inline"
+        }
+      }, [_vm._v(_vm._s(value) + " ")])
+    }), _vm._v(" "), _c('br'), _vm._v("\n                                            论文数量：" + _vm._s(item.resultsnumber) + "  被引数量：" + _vm._s(item.citedtimes) + "\n                                        ")], 2)], 1)], 1)])
+  }), 0)]), _vm._v(" "), _c('div', {
+    staticClass: "certify-detail",
+    staticStyle: {
+      "width": "100%",
+      "background-color": "white",
+      "height": "650px"
+    }
   }, [(_vm.identity == 'VISITOR') ? _c('div', {
     staticStyle: {
       "width": "100%",
       "text-align": "center",
       "height": "480px"
     }
-  }, [_vm._m(0)]) : _vm._e(), _vm._v(" "), _c('Tabs', {
+  }, [_c('h2', {
+    staticStyle: {
+      "margin-top": "80px"
+    }
+  }, [_vm._v("您还未登录！"), _c('br'), _vm._v(" 无法查看个人主页")])]) : _vm._e(), _vm._v(" "), _c('div', {
     directives: [{
       name: "show",
       rawName: "v-show",
-      value: (_vm.identity != 'VISITOR'),
-      expression: "identity != 'VISITOR'"
+      value: ((_vm.identity == 'USER' || _vm.identity == 'ADMIN') && _vm.same_name == false),
+      expression: "(identity == 'USER' || identity == 'ADMIN') && same_name == false"
     }],
-    staticStyle: {
-      "min-height": "480px",
-      "margin-top": "60px",
-      "width": "100%",
-      "text-align": "center"
-    },
-    attrs: {
-      "value": "name2",
-      "animated": false
-    }
-  }, [(_vm.identity != 'EXPERT') ? _c('TabPane', {
-    attrs: {
-      "label": "修改用户名",
-      "name": "name1"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.handleReset('change_pwd')
-      }
-    }
-  }, [_c('div', {
     staticClass: "layout-content-main"
   }, [_c('Form', {
-    ref: "change_name",
+    ref: "formValidate",
     attrs: {
-      "model": _vm.change_name,
-      "rules": _vm.change_name_rule,
+      "model": _vm.formValidate,
+      "rules": _vm.ruleValidate,
       "label-width": 100
     }
   }, [_c('FormItem', {
     attrs: {
-      "label": "新用户名",
+      "label": "真实姓名",
       "prop": "name"
     }
   }, [_c('Input', {
     staticClass: "input-select-class",
     attrs: {
-      "placeholder": "请输入用户名",
-      "onkeypress": "if(event.keyCode == 13) return false;"
+      "placeholder": "请输入真实名"
     },
     model: {
-      value: (_vm.change_name.name),
+      value: (_vm.formValidate.name),
       callback: function($$v) {
-        _vm.$set(_vm.change_name, "name", $$v)
+        _vm.$set(_vm.formValidate, "name", $$v)
       },
-      expression: "change_name.name"
+      expression: "formValidate.name"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', {
+    attrs: {
+      "label": "身份证号",
+      "prop": "id_num"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "placeholder": "请输入身份证号"
+    },
+    model: {
+      value: (_vm.formValidate.id_num),
+      callback: function($$v) {
+        _vm.$set(_vm.formValidate, "id_num", $$v)
+      },
+      expression: "formValidate.id_num"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', {
+    attrs: {
+      "label": "研究领域",
+      "prop": "field"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "placeholder": "研究领域"
+    },
+    model: {
+      value: (_vm.formValidate.field),
+      callback: function($$v) {
+        _vm.$set(_vm.formValidate, "field", $$v)
+      },
+      expression: "formValidate.field"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', {
+    attrs: {
+      "label": "所属机构",
+      "prop": "organization"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "placeholder": "所属机构"
+    },
+    model: {
+      value: (_vm.formValidate.organization),
+      callback: function($$v) {
+        _vm.$set(_vm.formValidate, "organization", $$v)
+      },
+      expression: "formValidate.organization"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', {
+    attrs: {
+      "label": "备注",
+      "prop": "else_info"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "type": "textarea",
+      "placeholder": "备注信息",
+      "maxlength": 140,
+      "rows": 6
+    },
+    model: {
+      value: (_vm.formValidate.else_info),
+      callback: function($$v) {
+        _vm.$set(_vm.formValidate, "else_info", $$v)
+      },
+      expression: "formValidate.else_info"
     }
   })], 1), _vm._v(" "), _c('FormItem', [_c('Button', {
+    staticStyle: {
+      "margin-left": "6%"
+    },
     attrs: {
       "type": "primary"
     },
     on: {
       "click": function($event) {
-        return _vm.handleSubmit('change_name')
-      }
-    }
-  }, [_vm._v("修改")])], 1)], 1)], 1)]) : _vm._e(), _vm._v(" "), _c('TabPane', {
-    attrs: {
-      "label": "修改密码",
-      "name": "name2"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.handleReset('change_name')
-      }
-    }
-  }, [_c('div', {
-    staticClass: "layout-content-main"
-  }, [_c('Form', {
-    ref: "change_pwd",
-    attrs: {
-      "model": _vm.change_pwd,
-      "rules": _vm.change_pwd_rule,
-      "label-width": 100
-    }
-  }, [_c('FormItem', {
-    attrs: {
-      "label": "旧密码",
-      "prop": "old_password"
-    }
-  }, [_c('Input', {
-    staticClass: "input-select-class",
-    attrs: {
-      "type": "password",
-      "placeholder": "请输入旧密码"
-    },
-    model: {
-      value: (_vm.change_pwd.old_password),
-      callback: function($$v) {
-        _vm.$set(_vm.change_pwd, "old_password", $$v)
-      },
-      expression: "change_pwd.old_password"
-    }
-  })], 1), _vm._v(" "), _c('FormItem', {
-    attrs: {
-      "label": "新密码",
-      "prop": "password"
-    }
-  }, [_c('Input', {
-    staticClass: "input-select-class",
-    attrs: {
-      "type": "password",
-      "placeholder": "请输入长度不超过10的新密码"
-    },
-    model: {
-      value: (_vm.change_pwd.password),
-      callback: function($$v) {
-        _vm.$set(_vm.change_pwd, "password", $$v)
-      },
-      expression: "change_pwd.password"
-    }
-  })], 1), _vm._v(" "), _c('FormItem', {
-    attrs: {
-      "label": "确认密码",
-      "prop": "cpwd"
-    }
-  }, [_c('Input', {
-    staticClass: "input-select-class",
-    attrs: {
-      "type": "password",
-      "placeholder": "请再次输入密码"
-    },
-    model: {
-      value: (_vm.change_pwd.cpwd),
-      callback: function($$v) {
-        _vm.$set(_vm.change_pwd, "cpwd", $$v)
-      },
-      expression: "change_pwd.cpwd"
-    }
-  })], 1), _vm._v(" "), _c('FormItem', [_c('Button', {
-    attrs: {
-      "type": "primary"
-    },
-    on: {
-      "click": function($event) {
-        return _vm.handleSubmit('change_pwd')
+        return _vm.handleSubmit('formValidate')
       }
     }
   }, [_vm._v("提交")]), _vm._v(" "), _c('Button', {
@@ -1072,81 +1205,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     on: {
       "click": function($event) {
-        return _vm.handleReset('change_pwd')
+        return _vm.handleReset('formValidate')
       }
     }
-  }, [_vm._v("重置")])], 1)], 1)], 1)]), _vm._v(" "), _c('TabPane', {
-    attrs: {
-      "label": "修改头像",
-      "name": "name3"
-    }
-  }, [_c('div', {
-    staticClass: "layout-content-main"
-  }, [_c('my-upload', {
-    attrs: {
-      "field": "img",
-      "width": 150,
-      "height": 150,
-      "url": this.upload_url,
-      "params": _vm.params,
-      "headers": _vm.headers,
-      "img-format": "png"
-    },
-    on: {
-      "crop-success": _vm.cropSuccess,
-      "crop-upload-success": _vm.cropUploadSuccess,
-      "crop-upload-fail": _vm.cropUploadFail
-    },
-    model: {
-      value: (_vm.show),
-      callback: function($$v) {
-        _vm.show = $$v
-      },
-      expression: "show"
-    }
-  }), _vm._v(" "), _c('img', {
-    staticStyle: {
-      "border-radius": "20%",
-      "padding": "3px",
-      "background-color": "#fff",
-      "border": "1px solid rgba(0, 0, 0, 0.15)"
-    },
-    attrs: {
-      "src": _vm.imgDataUrl
-    }
-  }), _vm._v(" "), _c('br'), _c('br'), _vm._v(" "), _c('Button', {
-    on: {
-      "click": _vm.toggleShow
-    }
-  }, [_vm._v("设置头像")])], 1)])], 1)], 1), _vm._v(" "), _c('Layout', [_c('Footer', {
+  }, [_vm._v("重置")])], 1)], 1)], 1)])]), _vm._v(" "), _c('Footer', {
     staticClass: "layout-footer-center",
     staticStyle: {
-      "background-color": "#666666",
-      "color": "#eeeeee"
+      "background-color": "#515a6e",
+      "color": "#515a6e"
     }
-  }, [_vm._v("\n                2019-2019 © ZebraScience\n                "), _c('router-link', {
-    staticStyle: {
-      "margin-left": "20px",
-      "color": "#eeeeee"
-    },
-    attrs: {
-      "to": {
-        path: '/aboutUs'
-      }
-    }
-  }, [_vm._v("联系我们")])], 1)], 1)], 1)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('h2', {
-    staticStyle: {
-      "margin-top": "80px"
-    }
-  }, [_vm._v("您还未登录！"), _c('br'), _vm._v(" Zebra 请您登录")])
-}]}
+  }, [_c('AboutUs')], 1)], 1)], 1)
+},staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-d43186d6", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-126a149d", module.exports)
   }
 }
 

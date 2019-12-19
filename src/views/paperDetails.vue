@@ -141,45 +141,29 @@
                 flag:false,
                 modal2: false,
                 modal3: false,
-                identity:this.GLOBAL.userType,
-                //identity:'EXPERT', //EXPERT USER VISITOR
+                //identity:this.GLOBAL.userType,
+                identity:'EXPERT', //EXPERT USER VISITOR
                 isliked: '',
                 showlike: '',
                 content:'',
-                pageNum:1,
-                pageSize:5,
+                pageNum: 1,
+                pageSize: 5,
                 cur_cmt:[],
                 paper:{
-                    // paper_id:'', //'13e8bab7244258710c462441e19afbad',
-                    // name:'',
-                    // year:'',
-                    // source_url:[],
-                    // free_url:[],
-                    // source_journal:{
-                    //     name:'',
-                    //     date:''
-                    // },
-                    // author:[],
-                    // keyword:[],
-                    // abstract:''
+                     paper_id:'', //'13e8bab7244258710c462441e19afbad',
+                     name:'',
+                     year:'',
+                     source_url:[],
+                     free_url:[],
+                     source_journal:{
+                         name:'',
+                         date:''
+                     },
+                     author:[],
+                     keyword:[],
+                     abstract:''
                 },
-                comment:[
-                    // {
-                    //     date:'2019-5-16',from:{username:"cxk",userid:"111@123.com"},
-                    //     content:'你打篮球像我！',
-                    //     replies: [{              //回复评论的信息，是一个数组，如果没内容就是一个空数组
-                    //             responder: "xzd",    //评论者
-                    //             reviewers: "cxk",         //被评论者
-                    //             time: "2016-09-05",
-                    //             content: "你写代码像蔡徐坤"
-                    //         }]
-                    // },
-                    // {
-                    //     date:'2019-5-15',from:{username:"xzd",userid:"111@12354.com"},
-                    //     content:'你打篮球像cxk！',
-                    //     replies:[],
-                    // },
-                ]
+                comment:[]
             }
         },
         created() {
@@ -256,7 +240,7 @@
                     });
             },
             change_page (value) {
-                this.pageNum = value;
+                this.pageNum = parseInt(value);
                 console.log(this.pageNum);
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;

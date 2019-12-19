@@ -1,18 +1,18 @@
 webpackJsonp([2],{
 
-/***/ 371:
+/***/ 370:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(863)
 __webpack_require__(864)
+__webpack_require__(865)
 
 var Component = __webpack_require__(70)(
   /* script */
-  __webpack_require__(593),
+  __webpack_require__(595),
   /* template */
-  __webpack_require__(880),
+  __webpack_require__(878),
   /* scopeId */
   "data-v-8f15f754",
   /* cssModules */
@@ -40,7 +40,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 385:
+/***/ 386:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81,25 +81,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 388:
+/***/ 387:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 389:
+/***/ 388:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(388)
+__webpack_require__(387)
 
 var Component = __webpack_require__(70)(
   /* script */
-  __webpack_require__(385),
+  __webpack_require__(386),
   /* template */
-  __webpack_require__(390),
+  __webpack_require__(389),
   /* scopeId */
   "data-v-14f43d51",
   /* cssModules */
@@ -127,7 +127,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 390:
+/***/ 389:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -143,13 +143,37 @@ if (false) {
 
 /***/ }),
 
+/***/ 390:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "aboutUs"
+});
+
+/***/ }),
+
 /***/ 391:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(389);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(388);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__);
+//
+//
 //
 //
 //
@@ -208,7 +232,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             modal1: false,
             theme1: 'primary',
             index_url: '/',
-            register_url: '/register',
             email: '',
             password: '',
             identity: this.GLOBAL.userType,
@@ -288,6 +311,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         setting: function setting() {
             this.$router.push({ path: '/setting' });
         },
+        jump_register: function jump_register() {
+            this.$router.push({ path: '/register' });
+        },
         logout: function logout() {
             this.GLOBAL.setUserType('VISITOR');
             this.identity = this.GLOBAL.userType;
@@ -321,6 +347,52 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /***/ }),
 
 /***/ 393:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 394:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(393)
+
+var Component = __webpack_require__(70)(
+  /* script */
+  __webpack_require__(390),
+  /* template */
+  __webpack_require__(397),
+  /* scopeId */
+  "data-v-41345060",
+  /* cssModules */
+  null
+)
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\aboutUs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] aboutUs.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-41345060", Component.options)
+  } else {
+    hotAPI.reload("data-v-41345060", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 395:
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -331,7 +403,7 @@ var Component = __webpack_require__(70)(
   /* script */
   __webpack_require__(391),
   /* template */
-  __webpack_require__(394),
+  __webpack_require__(396),
   /* scopeId */
   "data-v-3baacb0e",
   /* cssModules */
@@ -359,11 +431,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 394:
+/***/ 396:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('Menu', {
+    staticClass: "menutype",
     staticStyle: {
       "width": "100%",
       "position": "fixed"
@@ -389,7 +462,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-home",
       "size": "20"
     }
-  }), _vm._v("\n            首页\n        ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
+  }), _vm._v("\n                首页\n            ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
     attrs: {
       "name": "5"
     }
@@ -467,7 +540,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-contact",
       "size": "20"
     }
-  }), _vm._v("\n            " + _vm._s(this.GLOBAL.userName) + "\n        ")], 1), _vm._v(" "), _c('MenuItem', {
+  }), _vm._v("\n                " + _vm._s(this.GLOBAL.userName) + "\n            ")], 1), _vm._v(" "), _c('MenuItem', {
     attrs: {
       "name": "2-1"
     },
@@ -515,7 +588,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.modal1 = true
       }
     }
-  }, [_vm._v("\n        登录\n        "), _c('Modal', {
+  }, [_vm._v("\n            登录\n            "), _c('Modal', {
     attrs: {
       "title": "登录",
       "ok-text": "登录",
@@ -585,16 +658,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })])])], 1) : _vm._e(), _vm._v(" "), _c('a', {
     staticStyle: {
       "float": "right"
-    },
-    attrs: {
-      "href": _vm.register_url
     }
-  }, [(_vm.identity == 'VISITOR') ? _c('MenuItem', {
+  }, [_c('MenuItem', {
     attrs: {
-      "href": _vm.register_url,
       "name": "4"
     }
-  }, [_vm._v("\n            注册\n        ")]) : _vm._e()], 1)], 1)
+  }, [_c('a', {
+    staticStyle: {
+      "size": "35px",
+      "color": "#ffffff"
+    },
+    on: {
+      "click": _vm.jump_register
+    }
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t注册\n\t\t\t\t\t\t\t\t")])])], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -606,13 +683,55 @@ if (false) {
 
 /***/ }),
 
-/***/ 593:
+/***/ 397:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "aboutUs",
+    staticStyle: {
+      "background": "#515a6e",
+      "height": "80px"
+    }
+  }, [_c('span', {
+    staticStyle: {
+      "font-size": "16px"
+    }
+  }, [_c('a', {
+    staticStyle: {
+      "color": "#ffffff"
+    }
+  }, [_vm._v("科技资源共享平台")])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('span', {
+    staticStyle: {
+      "font-size": "14px"
+    }
+  }, [_c('a', {
+    staticStyle: {
+      "color": "#ffffff"
+    }
+  }, [_vm._v("联系我们：1137559912@qq.com")])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-41345060", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 595:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(395);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menuBar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__aboutUs_vue__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__aboutUs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__aboutUs_vue__);
 //
 //
 //
@@ -778,11 +897,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a
+        MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a,
+        AboutUs: __WEBPACK_IMPORTED_MODULE_1__aboutUs_vue___default.a
     },
     name: 'user',
     data: function data() {
@@ -864,13 +985,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 863:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 864:
 /***/ (function(module, exports) {
 
@@ -878,13 +992,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 880:
+/***/ 865:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 878:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "userpage"
   }, [_c('MenuBar', {
+    staticStyle: {
+      "background": "#515a6e"
+    },
     on: {
       "user": function($event) {
         _vm.identity = 'USER'
@@ -1144,20 +1268,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), 0)])])], 1)], 1), _vm._v(" "), _c('Footer', {
     staticClass: "layout-footer-center",
     staticStyle: {
-      "background-color": "#666666",
-      "color": "#eeeeee"
+      "background-color": "#515a6e",
+      "color": "#515a6e"
     }
-  }, [_vm._v("\n                2019-2019 © ZebraScience\n                "), _c('router-link', {
-    staticStyle: {
-      "margin-left": "20px",
-      "color": "#eeeeee"
-    },
-    attrs: {
-      "to": {
-        path: '/aboutUs'
-      }
-    }
-  }, [_vm._v("联系我们")])], 1)], 1)], 1)
+  }, [_c('AboutUs')], 1)], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

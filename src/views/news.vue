@@ -50,10 +50,10 @@
                             <Icon type="md-chatbubbles" />
                             评论
                         </MenuItem>
-<!--                        <MenuItem name="2" @click.native="news_type = 'like'">-->
-<!--                            <Icon type="md-heart" />-->
-<!--                            关注-->
-<!--                        </MenuItem>-->
+                        <MenuItem name="2" @click.native="news_type = 'like'">-->
+                            <Icon type="md-heart" />-->
+                           关注
+                       </MenuItem>
                         <MenuItem name="3" @click.native="news_type = 'system'">
                             <Icon type="md-alert" />
                             系统通知
@@ -273,139 +273,10 @@
                 identity: this.GLOBAL.userType,
                 //identity:'ADMIN', //EXPERT USER visitor ADMIN
                 news_type:'comments', //comments like system verify
-                comments_news: [
-                    // {
-                    //     msg_id: 'c1',
-                    //     content: 'message1',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'c2',
-                    //     content: 'message2',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'c3',
-                    //     content: 'message3',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'c4',
-                    //     content: 'message4',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'c5',
-                    //     content: 'message5',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                ],
-                like_news: [
-                    // {
-                    //     msg_id: 'l1',
-                    //     content: 'message1',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'l2',
-                    //     content: 'message2',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'l3',
-                    //     content: 'message3',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'l4',
-                    //     content: 'message4',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 'l5',
-                    //     content: 'message5',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                ],
-                system_news: [
-                    // {
-                    //     msg_id: 's1',
-                    //     content: 'message1',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 's2',
-                    //     content: 'message2',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 's3',
-                    //     content: 'message3',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 's4',
-                    //     content: 'message4',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                    // {
-                    //     msg_id: 's5',
-                    //     content: 'message5',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    // },
-                ],
-                verify_news: [
-                    // {
-                    //     msg_id: 'v1',
-                    //     content: 'message1',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    //     apply_id: '5cf37fdc9c89e67433cbbea4',
-                    // },
-                    // {
-                    //     msg_id: 'v2',
-                    //     content: 'message2',
-                    //     status: 'No',
-                    //     date: '2019-6-2 15:31:28',
-                    //     apply_id: '',
-                    // },
-                    // {
-                    //     msg_id: 'v3',
-                    //     content: 'message3',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    //     apply_id: '',
-                    // },
-                    // {
-                    //     msg_id: 'v4',
-                    //     content: 'message4',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    //     apply_id: '',
-                    // },
-                    // {
-                    //     msg_id: 'v5',
-                    //     content: 'message5',
-                    //     status: 'Yes',
-                    //     date: '2019-6-2 15:31:28',
-                    //     apply_id: '',
-                    // },
-                ],
+                comments_news: [],
+                like_news: [],
+                system_news: [],
+                verify_news: [],
                 apply_msg:[],
             }
         },
