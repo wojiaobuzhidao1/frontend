@@ -34,7 +34,7 @@
             </Modal>
         </MenuItem>
         <a style="float: right">
-            <MenuItem name="4">
+            <MenuItem v-if="identity == 'VISITOR'" @click.native="modal1=true" name="4">
                 <a @click="jump_register" style="size: 35px; color: #ffffff">
 									注册
 								</a>

@@ -7,7 +7,7 @@
             <Button v-if="wordcloud_show" @click="check_word_cloud" style="margin-left: 70%">点击查看词云</Button>
             <Modal v-model="wordcloud_modal" draggable scrollable title="词云">
                 <div v-if="wordcloud_modal" style="text-align: center">
-                    <img :src=this.GLOBAL.wordcloud_path style="display: block; width:100%; height:380px; object-fit: cover">
+                    <img :src= this.GLOBAL.wordcloud_path style="display: block; width:100%; height:800px; object-fit: cover">
                 </div>
                 <div slot="footer">
                     <Button type="primary" size="large"  @click="quit_word_cloud">确定</Button>
@@ -89,7 +89,7 @@
 
             </div>
             <div v-if="this.$route.query.search_type == 'paper' || this.$route.query.search_type == 'organization'" style="margin: 3% 20% 10% 0">
-                <Page :current="pageNum" :total="totalNum" :page-size=10 @on-change="change_page" simple style="text-align: center;"/>
+                <Page :current= parseInt(pageNum) :total="totalNum" :page-size=10 @on-change="change_page" simple style="text-align: center;"/>
             </div>
             <BackTop :height="100" :bottom="200">
                 <Icon type="md-arrow-up" class="top"/>
@@ -249,9 +249,12 @@
                 this.getSearchDetails(item, content);
             },
             change_page(value) {
+            if (value == '')
+                this.pageNum = 1;
+            else
+               this.pageNum = parseInt(value);
 
-                this.pageNum = value;
-                this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
+               this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
             },
         },
         computed: {

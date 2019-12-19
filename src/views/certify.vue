@@ -42,7 +42,7 @@
                             <FormItem label="真实姓名" prop="name" >
                                 <Input v-model="formValidate.name" placeholder="请输入真实名" class="input-select-class"></Input>
                             </FormItem>
-                            <FormItem label="身份证号" prop="id_num" >
+                            <FormItem label="邮箱" prop="id_num" >
                                 <Input v-model="formValidate.id_num" placeholder="请输入身份证号" class="input-select-class"></Input>
                             </FormItem>
                             <FormItem label="研究领域" prop="field" >

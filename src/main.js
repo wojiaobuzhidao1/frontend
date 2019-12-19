@@ -9,7 +9,10 @@ import Global from './views/global';
 import VueResource from 'vue-resource';
 import myUpload from 'vue-image-crop-upload';
 import 'babel-polyfill';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
+Vue.use(ElementUI);
 Vue.use(VueRouter);
 Vue.use(iView);
 Vue.use(VueResource);

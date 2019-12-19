@@ -103,7 +103,7 @@
                                 姓名：<br>
                                 Email：<br>
                                 绑定ScholarID：<br>
-                                身份证号：<br>
+                                邮箱：<br>
                                 专家领域：<br>
                                 备注：<br>
                                 申请日期：<br>
@@ -143,9 +143,9 @@
                                                 <div style="display: inline; color: #8391a5; font-size: 12px; margin-left: 10px; float: right">{{ item.date }}</div>
                                             </Col>
                                             <Col span="5">
-                                                <Button type="error" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)">删除</Button>
-                                                <Button v-show="item.status == 'Yes'" type="success" size="small" style="float:right;">已查看</Button>
-                                                <Button v-show="item.status == 'No'" type="info" size="small" style="float:right;" @click="show_msg_modal(item.content, item.msg_id)">未查看</Button>
+                                                <el-button type="info" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)" round>删除</el-button>
+                                                <el-button  v-show="item.status == 'Yes'" type="info"  size="small" style="float:right;" round >已查看</el-button>
+                                                <el-button  v-show="item.status == 'No'" type="primary"  size="small" style="float:right;" @click="show_msg_modal(item.content, item.msg_id)" round>未查看</el-button >
                                             </Col>
                                         </Row>
                                     </div>
@@ -170,9 +170,9 @@
                                                 <div style="display: inline; color: #8391a5; font-size: 12px; margin-left: 10px; float: right">{{ item.date }}</div>
                                             </Col>
                                             <Col span="5">
-                                                <Button type="error" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)">删除</Button>
-                                                <Button v-show="item.status == 'Yes'" type="success" size="small" style="float:right;">已查看</Button>
-                                                <Button v-show="item.status == 'No'" type="info" size="small" style="float:right;" @click="show_msg_modal(item.content, item.msg_id)">未查看</Button>
+                                                <el-button type="info" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)" round>删除</el-button>
+                                                <el-button  v-show="item.status == 'Yes'" type="info"  size="small" style="float:right;" round >已查看</el-button>
+                                                <el-button  v-show="item.status == 'No'" type="primary"  size="small" style="float:right;" @click="show_msg_modal(item.content, item.msg_id)" round>未查看</el-button >
                                             </Col>
                                         </Row>
                                     </div>
@@ -197,9 +197,9 @@
                                                 <div style="display: inline; color: #8391a5; font-size: 12px; margin-left: 10px; float: right">{{ item.date }}</div>
                                             </Col>
                                             <Col span="5">
-                                                <Button type="error" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)">删除</Button>
-                                                <Button v-show="item.status == 'Yes'" type="success" size="small" style="float:right;">已查看</Button>
-                                                <Button v-show="item.status == 'No'" type="info" size="small" style="float:right;" @click="show_msg_modal(item.content, item.msg_id)">未查看</Button>
+                                                <el-button type="info" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)" round>删除</el-button>
+                                                <el-button  v-show="item.status == 'Yes'" type="info"  size="small" style="float:right;" round >已查看</el-button>
+                                                <el-button  v-show="item.status == 'No'" type="primary"  size="small" style="float:right;" @click="show_msg_modal(item.content, item.msg_id)" round>未查看</el-button >
                                             </Col>
                                         </Row>
                                     </div>
@@ -224,9 +224,9 @@
                                                 <div style="display: inline; color: #8391a5; font-size: 12px; margin-left: 10px; float: right">{{ item.date }}</div>
                                             </Col>
                                             <Col span="5">
-                                                <Button type="error" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)">删除</Button>
-                                                <Button v-show="item.status == 'Yes'" type="success" size="small" style="float:right;" @click="show_verify_modal(item.apply_id, item.msg_id, item.status)">已查看</Button>
-                                                <Button v-show="item.status == 'No'" type="info" size="small" style="float:right;" @click="show_verify_modal(item.apply_id, item.msg_id, item.status)">未查看</Button>
+                                                <el-button type="info" size="small" style="float: right; margin-left: 5px" @click="show_del_modal(item.msg_id)" round>删除</el-button>
+                                                <el-button v-show="item.status == 'Yes'" type="info" size="small" style="float:right;" @click="show_verify_modal(item.apply_id, item.msg_id, item.status)" round>已查看</el-button>
+                                                <el-button v-show="item.status == 'No'" type="info" size="small" style="float:right;" @click="show_verify_modal(item.apply_id, item.msg_id, item.status)" round>未查看</el-button>
                                             </Col>
                                         </Row>
                                     </div>

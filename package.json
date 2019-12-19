@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "echarts": "^4.5.0",
+    "element-ui": "^2.13.0",
     "iview": "^3.0.0",
     "vue": "^2.5.16",
     "vue-router": "^2.8.1"

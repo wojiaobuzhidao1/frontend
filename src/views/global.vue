@@ -14,12 +14,12 @@
         password: '', // Just For Test
         userType: 'VISITOR',
         wordcloud_path: '',
-        avatar: 'http://10.251.252.55:5000/static/photo/1559356265_img.png',
+        avatar: 'http://10.251.252.55:5000/static/photo/1576664428_img.png',
         collectList: [
             // {
             //     name: 'This is Paper Title One This is Paper Title One This is Paper Title One This is Paper Title One',
-            //     year: '2018',
-            //     author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+            //     year: '2020',
+            //     author: {'郭婉如':'1', '蒙春怡':'2', '杨增锴':'3', '朱天乐':'4'},
             //     source_journal: {
             //         name: 'This is Paper Source',
             //         date: 2018,
@@ -27,8 +27,8 @@
             // },
             // {
             //     name: 'This is Paper Title One',
-            //     year: '2018',
-            //     author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+            //     year: '2020',
+            //     author: {'郭婉如':'1', '蒙春怡':'2', '杨增锴':'3', '朱天乐':'4'},
             //     source_journal: {
             //         name: 'This is Paper Source',
             //         date: 2019,
@@ -38,7 +38,7 @@
         followList: [
             // {
             //     scid: 1005,
-            //     name: '郭子溢',
+            //     name: '郭婉如',
             //     field: ['计算机'],
             //     mechanism: '北航',
             //     resultsnumber: 99,
@@ -46,7 +46,7 @@
             // },
             // {
             //     scid: 1022,
-            //     name: '黎昆昌黎昆昌',
+            //     name: '蒙春怡蒙春怡',
             //     field: ['计算机计算机计算机'],
             //     mechanism: '北航北航北航北航北航',
             //     resultsnumber: 97,
@@ -54,7 +54,7 @@
             // },
             // {
             //     scid: 1020,
-            //     name: '许志达',
+            //     name: '杨增锴',
             //     field: ['计算机','软件'],
             //     mechanism: '北航',
             //     resultsnumber: 95,
@@ -62,7 +62,7 @@
             // },
             // {
             //     scid: 1026,
-            //     name: '何浩乾',
+            //     name: '朱天乐',
             //     field: ['计算机'],
             //     mechanism: '北航',
             //     resultsnumber: 93,
@@ -72,8 +72,8 @@
         paperList: [
             // {
             //     name: 'This is Paper Title One',
-            //     year: '2018',
-            //     author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+            //     year: '2020',
+            //     author: {'郭婉如':'1', '蒙春怡':'2', '杨增锴':'3', '朱天乐':'4'},
             //     source_journal: {
             //         name: 'This is Paper Source',
             //         date: 2018,
@@ -81,8 +81,8 @@
             // },
             // {
             //     name: 'This is Paper Title One',
-            //     year: '2018',
-            //     author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+            //     year: '2020',
+            //     author: {'郭婉如':'1', '蒙春怡':'2', '杨增锴':'3', '朱天乐':'4'},
             //     source_journal: {
             //         name: 'This is Paper Source',
             //         date: 2019,

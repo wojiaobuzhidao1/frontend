@@ -53,6 +53,9 @@
     padding: 3px;
     min-width: 30%;
 }
+.ivu-menu-primary{
+      background:#515a6e
+      }
 
 </style>
 
@@ -183,7 +186,7 @@
                         paper_detail: {
                             title: 'This is Paper Title One This is Paper Title One This is Paper Title One This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾 郭子溢 黎昆昌 许志达 何浩乾 郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐 郭婉如 蒙春怡 杨增锴 朱天乐 郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source This is Paper Source This is Paper Source'
                         }
                     },
@@ -191,7 +194,7 @@
                         paper_detail: {
                             title: 'This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source'
                         }
                     },
@@ -199,7 +202,7 @@
                         paper_detail: {
                             title: 'This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source'
                         }
                     },
@@ -207,7 +210,7 @@
                         paper_detail: {
                             title: 'This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source'
                         }
                     },
@@ -215,7 +218,7 @@
                         paper_detail: {
                             title: 'This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source'
                         }
                     },
@@ -223,7 +226,7 @@
                         paper_detail: {
                             title: 'This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source'
                         }
                     },
@@ -231,7 +234,7 @@
                         paper_detail: {
                             title: 'This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source'
                         }
                     },
@@ -239,16 +242,16 @@
                         paper_detail: {
                             title: 'This is Paper Title One',
                             year: '2018',
-                            author: '郭子溢 黎昆昌 许志达 何浩乾',
+                            author: '郭婉如 蒙春怡 杨增锴 朱天乐',
                             source: 'This is Paper Source'
                         }
                     },
                 ],
                 coop_sch: [
-                    { message: '郭子溢' },
-                    { message: '黎昆昌' },
-                    { message: '许志达' },
-                    { message: '何浩乾' }
+                    { message: '郭婉如' },
+                    { message: '蒙春怡' },
+                    { message: '杨增锴' },
+                    { message: '朱天乐' }
                 ],
                 coop_org: [
                     { message: '北大' },

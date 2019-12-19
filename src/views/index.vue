@@ -23,7 +23,7 @@
         </div>
         <Row type="flex" justify="center" align="middle" style="height: 70%">
             <Col span="24" offset="">
-                <h1>
+                <h1 v-show="!advance">
                     <img src="../images/timg.jpg" style="height: 180px">
                 </h1>
                 <br><br><br><br><br><br>
@@ -36,7 +36,7 @@
                         <Option value="paper"><b>论文</b></Option>
                         <Option value="organization"><b>机构</b></Option>
                     </Select>
-                    <Button  @click="search"  slot="append" ><img v-if="and_times<4" src="../images/search.jpg" @click="and_times++" height="20" width="23" style="vertical-align:middle"></Button>
+                    <Button  @click="search"  slot="append"  ><img v-if="and_times<4" src="../images/search.jpg" @click="and_times++" height="20" width="23" style="vertical-align:middle"></Button>
                     <Button v-if="search_item=='paper'" @click="advance=!advance"  slot="append" >高级检索↓</Button>
                     <Button v-if="search_item=='professor'" @click="extra_org=!extra_org"  slot="append" >所在机构↓</Button>
                 </Input>
@@ -97,7 +97,7 @@
         <!--<router-link :to="news_url">消息界面</router-link>-->
         <!--<router-link :to="certify_url">申请认证</router-link>-->
         <!--<router-link :to="setting_url">信息设置</router-link>-->
-        <div id="ftCon">
+        <div id="ftCon"  v-show="!advance">
             <AboutUs></AboutUs>
         </div>
     </div>

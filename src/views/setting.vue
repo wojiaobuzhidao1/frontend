@@ -13,7 +13,7 @@
                                 <Input v-model="change_name.name" placeholder="请输入用户名" class="input-select-class" onkeypress="if(event.keyCode == 13) return false;"></Input>
                             </FormItem>
                             <FormItem>
-                                <Button type="primary" @click="handleSubmit('change_name')" >修改</Button>
+                                <el-button type="primary" size="small" @click="handleSubmit('change_name')" plain>修改</el-button>
                             </FormItem>
                         </Form>
                     </div>
@@ -31,8 +31,8 @@
                                 <Input type="password" v-model="change_pwd.cpwd" placeholder="请再次输入密码" class="input-select-class"/>
                             </FormItem>
                             <FormItem>
-                                <Button type="primary" @click="handleSubmit('change_pwd')" >提交</Button>
-                                <Button type="primary" @click="handleReset('change_pwd')" style="margin-left: 6%" >重置</Button>
+                                <el-button type="primary" size="small" @click="handleSubmit('change_pwd')" plain>提交</el-button>
+                                <el-button type="primary" size="small" @click="handleReset('change_pwd')" style="margin-left: 6%" plain>重置</el-button>
                             </FormItem>
                         </Form>
                     </div>

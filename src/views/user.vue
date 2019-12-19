@@ -184,7 +184,7 @@
                 //     {
                 //         name: 'This is Paper Title One This is Paper Title One This is Paper Title One This is Paper Title One',
                 //         year: '2018',
-                //         author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+                //         author: {'郭婉如':'1', '蒙春怡':'2', '杨增锴':'3', '朱天乐':'4'},
                 //         source_journal: {
                 //             name: 'This is Paper Source',
                 //             date: 2018,
@@ -193,7 +193,7 @@
                 //     {
                 //         name: 'This is Paper Title One',
                 //         year: '2018',
-                //         author: {'郭子溢':'1', '黎昆昌':'2', '许志达':'3', '何浩乾':'4'},
+                //         author: {'郭婉如':'1', '蒙春怡':'2', '杨增锴':'3', '朱天乐':'4'},
                 //         source_journal: {
                 //             name: 'This is Paper Source',
                 //             date: 2019,

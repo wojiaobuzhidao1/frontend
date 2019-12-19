@@ -25,8 +25,8 @@
                     <Input type="password" v-model="formValidate.cpwd" placeholder="请再次输入密码" class="input-select-class"/>
                 </FormItem>
                 <FormItem>
-                    <Button type="primary" @click="handleSubmit('formValidate',formValidate)" >提交</Button>
-                    <Button type="primary" @click="handleReset('formValidate')" style="margin-left: 6%" >重置</Button>
+                    <Button type="primary" @click="handleSubmit('formValidate',formValidate)" round>提交</Button>
+                    <Button type="primary" @click="handleReset('formValidate')" style="margin-left: 6%" round>重置</Button>
                 </FormItem>
             </Form>
         </div>
