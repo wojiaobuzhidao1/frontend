@@ -89,7 +89,7 @@
 
             </div>
             <div v-if="this.$route.query.search_type == 'paper' || this.$route.query.search_type == 'organization'" style="margin: 3% 20% 10% 0">
-                <Page :current= parseInt(pageNum) :total="totalNum" :page-size=10 @on-change="change_page" simple style="text-align: center;"/>
+                <Page :current= "pageNum" :total="totalNum" :page-size=10 @on-change="change_page" simple style="text-align: center;"/>
             </div>
             <BackTop :height="100" :bottom="200">
                 <Icon type="md-arrow-up" class="top"/>
