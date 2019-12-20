@@ -34,11 +34,11 @@
                     <Select v-model="search_item" slot="prepend" style="width: 80px;background-color: #515a6e;color: white">
                         <Option value="professor"><b>专家</b></Option>
                         <Option value="paper"><b>论文</b></Option>
-                        <Option value="organization"><b>机构</b></Option>
+                        <!--Option value="organization"><b>机构</b></Option-->
                     </Select>
                     <Button  @click="search"  slot="append"  ><img v-if="and_times<4" src="../images/search.jpg" @click="and_times++" height="20" width="23" style="vertical-align:middle"></Button>
                     <Button v-if="search_item=='paper'" @click="advance=!advance"  slot="append" >高级检索↓</Button>
-                    <Button v-if="search_item=='professor'" @click="extra_org=!extra_org"  slot="append" >所在机构↓</Button>
+                    <!--Button v-if="search_item=='professor'" @click="extra_org=!extra_org"  slot="append" >所在机构↓</Button-->
                 </Input>
                 <div style="width: 50%; margin-left: 25%; text-align: left" v-show="advance&&search_item=='paper'">
                     <div class="extra-item">
@@ -115,7 +115,7 @@
                 email: '',
                 password: '',
                 identity: this.GLOBAL.userType,
-                search_item: '',
+                search_item: 'paper',
                 search_content: '',
                 professorDetails_url: '/professorDetails',
                 user_url:'/user',
@@ -222,11 +222,12 @@
                 }
                 if(this.search_item == '')
                 {
-                    alert("请选择搜索类型");
-                    return;
+                    //alert("请选择搜索类型");
+										//return;
+										this.search_item == 'paper';
                 }
 
-                if (this.search_item == 'paper' && this.advance)
+                /*if (this.search_item == 'paper' && this.advance)
                 {
                     console.log(this.advance_data)
                     if(this.advance_time[0] < 0 || this.advance_time[1] > 2019)
@@ -246,7 +247,7 @@
                         }
                     })
                 }
-                else if (this.search_item == 'professor' && this.extra_org)
+                else */if (this.search_item == 'professor' && this.extra_org)
                 {
                     // if(this.extra_org_name == '')
                     // {

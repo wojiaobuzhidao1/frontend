@@ -11,7 +11,7 @@
                 <Select v-model="temp_item" slot="prepend" style="width: 80px;background-color: #eeeeee;color: black">
                     <Option value="professor">专家</Option>
                     <Option value="paper">论文</Option>
-                    <Option value="organization">机构</Option>
+                    <!--Option value="organization">机构</Option-->
                 </Select>
                 <Button  @click="search"  slot="append" style="background-color:#57c5f7;color: white" icon="ios-search" ></Button>
             </Input>

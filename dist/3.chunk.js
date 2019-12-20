@@ -1,25 +1,292 @@
 webpackJsonp([3],{
 
-/***/ 369:
+/***/ 1019:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 1032:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('MenuBar', {
+    staticStyle: {
+      "background": "#515a6e"
+    },
+    on: {
+      "user": function($event) {
+        _vm.identity = 'USER'
+      },
+      "visitor": function($event) {
+        _vm.identity = 'VISITOR'
+      },
+      "expert": function($event) {
+        _vm.identity = 'EXPERT'
+      },
+      "admin": function($event) {
+        _vm.identity = 'ADMIN'
+      }
+    }
+  }), _vm._v(" "), _c('div', {
+    staticClass: "certify-detail"
+  }, [(_vm.identity == 'VISITOR') ? _c('div', {
+    staticStyle: {
+      "width": "100%",
+      "text-align": "center",
+      "height": "480px"
+    }
+  }, [_vm._m(0)]) : _vm._e(), _vm._v(" "), _c('Tabs', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.identity != 'VISITOR'),
+      expression: "identity != 'VISITOR'"
+    }],
+    staticStyle: {
+      "min-height": "480px",
+      "margin-top": "60px",
+      "width": "100%",
+      "text-align": "center"
+    },
+    attrs: {
+      "value": "name2",
+      "animated": false
+    }
+  }, [(_vm.identity != 'EXPERT') ? _c('TabPane', {
+    attrs: {
+      "label": "修改用户名",
+      "name": "name1"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.handleReset('change_pwd')
+      }
+    }
+  }, [_c('div', {
+    staticClass: "layout-content-main"
+  }, [_c('Form', {
+    ref: "change_name",
+    attrs: {
+      "model": _vm.change_name,
+      "rules": _vm.change_name_rule,
+      "label-width": 100
+    }
+  }, [_c('FormItem', {
+    attrs: {
+      "label": "新用户名",
+      "prop": "name"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "placeholder": "请输入用户名",
+      "onkeypress": "if(event.keyCode == 13) return false;"
+    },
+    model: {
+      value: (_vm.change_name.name),
+      callback: function($$v) {
+        _vm.$set(_vm.change_name, "name", $$v)
+      },
+      expression: "change_name.name"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', [_c('el-button', {
+    attrs: {
+      "type": "primary",
+      "size": "small",
+      "plain": ""
+    },
+    on: {
+      "click": function($event) {
+        return _vm.handleSubmit('change_name')
+      }
+    }
+  }, [_vm._v("修改")])], 1)], 1)], 1)]) : _vm._e(), _vm._v(" "), _c('TabPane', {
+    attrs: {
+      "label": "修改密码",
+      "name": "name2"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.handleReset('change_name')
+      }
+    }
+  }, [_c('div', {
+    staticClass: "layout-content-main"
+  }, [_c('Form', {
+    ref: "change_pwd",
+    attrs: {
+      "model": _vm.change_pwd,
+      "rules": _vm.change_pwd_rule,
+      "label-width": 100
+    }
+  }, [_c('FormItem', {
+    attrs: {
+      "label": "旧密码",
+      "prop": "old_password"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "type": "password",
+      "placeholder": "请输入旧密码"
+    },
+    model: {
+      value: (_vm.change_pwd.old_password),
+      callback: function($$v) {
+        _vm.$set(_vm.change_pwd, "old_password", $$v)
+      },
+      expression: "change_pwd.old_password"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', {
+    attrs: {
+      "label": "新密码",
+      "prop": "password"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "type": "password",
+      "placeholder": "请输入长度不超过10的新密码"
+    },
+    model: {
+      value: (_vm.change_pwd.password),
+      callback: function($$v) {
+        _vm.$set(_vm.change_pwd, "password", $$v)
+      },
+      expression: "change_pwd.password"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', {
+    attrs: {
+      "label": "确认密码",
+      "prop": "cpwd"
+    }
+  }, [_c('Input', {
+    staticClass: "input-select-class",
+    attrs: {
+      "type": "password",
+      "placeholder": "请再次输入密码"
+    },
+    model: {
+      value: (_vm.change_pwd.cpwd),
+      callback: function($$v) {
+        _vm.$set(_vm.change_pwd, "cpwd", $$v)
+      },
+      expression: "change_pwd.cpwd"
+    }
+  })], 1), _vm._v(" "), _c('FormItem', [_c('el-button', {
+    attrs: {
+      "type": "primary",
+      "size": "small",
+      "plain": ""
+    },
+    on: {
+      "click": function($event) {
+        return _vm.handleSubmit('change_pwd')
+      }
+    }
+  }, [_vm._v("提交")]), _vm._v(" "), _c('el-button', {
+    staticStyle: {
+      "margin-left": "6%"
+    },
+    attrs: {
+      "type": "primary",
+      "size": "small",
+      "plain": ""
+    },
+    on: {
+      "click": function($event) {
+        return _vm.handleReset('change_pwd')
+      }
+    }
+  }, [_vm._v("重置")])], 1)], 1)], 1)]), _vm._v(" "), _c('TabPane', {
+    attrs: {
+      "label": "修改头像",
+      "name": "name3"
+    }
+  }, [_c('div', {
+    staticClass: "layout-content-main"
+  }, [_c('my-upload', {
+    attrs: {
+      "field": "img",
+      "width": 150,
+      "height": 150,
+      "url": this.upload_url,
+      "params": _vm.params,
+      "headers": _vm.headers,
+      "img-format": "png"
+    },
+    on: {
+      "crop-success": _vm.cropSuccess,
+      "crop-upload-success": _vm.cropUploadSuccess,
+      "crop-upload-fail": _vm.cropUploadFail
+    },
+    model: {
+      value: (_vm.show),
+      callback: function($$v) {
+        _vm.show = $$v
+      },
+      expression: "show"
+    }
+  }), _vm._v(" "), _c('img', {
+    staticStyle: {
+      "border-radius": "20%",
+      "padding": "3px",
+      "background-color": "#fff",
+      "border": "1px solid rgba(0, 0, 0, 0.15)"
+    },
+    attrs: {
+      "src": _vm.imgDataUrl
+    }
+  }), _vm._v(" "), _c('br'), _c('br'), _vm._v(" "), _c('Button', {
+    on: {
+      "click": _vm.toggleShow
+    }
+  }, [_vm._v("设置头像")])], 1)])], 1)], 1), _vm._v(" "), _c('Layout', [_c('Footer', {
+    staticClass: "layout-footer-center",
+    staticStyle: {
+      "background-color": "#515a6e",
+      "color": "#eeeeee"
+    }
+  }, [_c('AboutUs')], 1)], 1)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h2', {
+    staticStyle: {
+      "margin-top": "80px"
+    }
+  }, [_vm._v("您还未登录！"), _c('br'), _vm._v("请先登录")])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-d43186d6", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 521:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(859)
+__webpack_require__(1019)
 
-var Component = __webpack_require__(70)(
+var Component = __webpack_require__(98)(
   /* script */
-  __webpack_require__(591),
+  __webpack_require__(746),
   /* template */
-  __webpack_require__(877),
+  __webpack_require__(1032),
   /* scopeId */
-  "data-v-5dd27f4d",
+  null,
   /* cssModules */
   null
 )
-Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\search_detail.vue"
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\setting.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] search_detail.vue: functional components are not supported with templates, they should use render functions.")}
+if (Component.options.functional) {console.error("[vue-loader] setting.vue: functional components are not supported with templates, they should use render functions.")}
 
 /* hot reload */
 if (false) {(function () {
@@ -28,9 +295,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5dd27f4d", Component.options)
+    hotAPI.createRecord("data-v-d43186d6", Component.options)
   } else {
-    hotAPI.reload("data-v-5dd27f4d", Component.options)
+    hotAPI.reload("data-v-d43186d6", Component.options)
   }
 })()}
 
@@ -39,7 +306,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 385:
+/***/ 538:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80,25 +347,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 388:
+/***/ 539:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 389:
+/***/ 540:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(388)
+__webpack_require__(539)
 
-var Component = __webpack_require__(70)(
+var Component = __webpack_require__(98)(
   /* script */
-  __webpack_require__(385),
+  __webpack_require__(538),
   /* template */
-  __webpack_require__(390),
+  __webpack_require__(541),
   /* scopeId */
   "data-v-14f43d51",
   /* cssModules */
@@ -126,7 +393,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 390:
+/***/ 541:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -142,13 +409,37 @@ if (false) {
 
 /***/ }),
 
-/***/ 391:
+/***/ 542:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(389);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "aboutUs"
+});
+
+/***/ }),
+
+/***/ 543:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(540);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__);
+//
+//
 //
 //
 //
@@ -207,7 +498,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             modal1: false,
             theme1: 'primary',
             index_url: '/',
-            register_url: '/register',
             email: '',
             password: '',
             identity: this.GLOBAL.userType,
@@ -287,6 +577,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         setting: function setting() {
             this.$router.push({ path: '/setting' });
         },
+        jump_register: function jump_register() {
+            this.$router.push({ path: '/register' });
+        },
         logout: function logout() {
             this.GLOBAL.setUserType('VISITOR');
             this.identity = this.GLOBAL.userType;
@@ -312,25 +605,71 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 392:
+/***/ 544:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 393:
+/***/ 545:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 546:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(392)
+__webpack_require__(545)
 
-var Component = __webpack_require__(70)(
+var Component = __webpack_require__(98)(
   /* script */
-  __webpack_require__(391),
+  __webpack_require__(542),
   /* template */
-  __webpack_require__(394),
+  __webpack_require__(549),
+  /* scopeId */
+  "data-v-41345060",
+  /* cssModules */
+  null
+)
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\aboutUs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] aboutUs.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-41345060", Component.options)
+  } else {
+    hotAPI.reload("data-v-41345060", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 547:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(544)
+
+var Component = __webpack_require__(98)(
+  /* script */
+  __webpack_require__(543),
+  /* template */
+  __webpack_require__(548),
   /* scopeId */
   "data-v-3baacb0e",
   /* cssModules */
@@ -358,11 +697,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 394:
+/***/ 548:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('Menu', {
+    staticClass: "menutype",
     staticStyle: {
       "width": "100%",
       "position": "fixed"
@@ -388,7 +728,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-home",
       "size": "20"
     }
-  }), _vm._v("\n            首页\n        ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
+  }), _vm._v("\n                首页\n            ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
     attrs: {
       "name": "5"
     }
@@ -466,7 +806,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-contact",
       "size": "20"
     }
-  }), _vm._v("\n            " + _vm._s(this.GLOBAL.userName) + "\n        ")], 1), _vm._v(" "), _c('MenuItem', {
+  }), _vm._v("\n                " + _vm._s(this.GLOBAL.userName) + "\n            ")], 1), _vm._v(" "), _c('MenuItem', {
     attrs: {
       "name": "2-1"
     },
@@ -514,7 +854,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.modal1 = true
       }
     }
-  }, [_vm._v("\n        登录\n        "), _c('Modal', {
+  }, [_vm._v("\n            登录\n            "), _c('Modal', {
     attrs: {
       "title": "登录",
       "ok-text": "登录",
@@ -584,16 +924,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })])])], 1) : _vm._e(), _vm._v(" "), _c('a', {
     staticStyle: {
       "float": "right"
-    },
-    attrs: {
-      "href": _vm.register_url
     }
   }, [(_vm.identity == 'VISITOR') ? _c('MenuItem', {
     attrs: {
-      "href": _vm.register_url,
       "name": "4"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.modal1 = true
+      }
     }
-  }, [_vm._v("\n            注册\n        ")]) : _vm._e()], 1)], 1)
+  }, [_c('a', {
+    staticStyle: {
+      "size": "35px",
+      "color": "#ffffff"
+    },
+    on: {
+      "click": _vm.jump_register
+    }
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t注册\n\t\t\t\t\t\t\t\t")])]) : _vm._e()], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -605,535 +954,326 @@ if (false) {
 
 /***/ }),
 
-/***/ 407:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "d4c0a1aaae1dba8d0c5d074236d58897.png";
-
-/***/ }),
-
-/***/ 591:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menuBar_vue__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-// import Button from "../../dist/vendors";
-/* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
-        // Button,
-        MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a
-    },
-    name: "search_paper",
-    data: function data() {
-        return {
-            modal1: false,
-            wordcloud_modal: false,
-            // wordcloud_path: '',
-            wordcloud_show: false,
-            index_url: '/',
-            register_url: '/register',
-            identity: this.GLOBAL.userType,
-            theme1: 'primary',
-            search_results: [],
-            type: '',
-            pageNum: '',
-            totalNum: 0
-        };
-    },
-    created: function created() {
-        this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
-    },
-
-    methods: {
-        check_word_cloud: function check_word_cloud() {
-            this.wordcloud_modal = true;
-        },
-        quit_word_cloud: function quit_word_cloud() {
-            this.wordcloud_modal = false;
-        },
-        getSearchDetails: function getSearchDetails(item, content) {
-            this.wordcloud_show = false;
-            var that = this;
-            console.log("get: item + " + item + "; content + " + content + "; pageNum + " + this.pageNum);
-            if (this.$route.query.advance_data) {
-                var params = { 'keyw_and': this.$route.query.advance_data.and,
-                    'keyw_or': this.$route.query.advance_data.or,
-                    'keyw_not': this.$route.query.advance_data.none,
-                    'title': content,
-                    'author': this.$route.query.advance_writer,
-                    'journal': this.$route.query.advance_book,
-                    'start_time': this.$route.query.advance_time[0],
-                    'end_time': this.$route.query.advance_time[1],
-                    'page_num': this.pageNum
-                };
-                this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_paper_nb", params).then(function (res) {
-                    console.log(res);
-                    var detail = JSON.parse(res.body);
-                    console.log(detail);
-                    that.search_results = detail.msg;
-                    that.type = item;
-                    that.wordcloud_show = true;
-                    if (that.pageNum == '') that.GLOBAL.setWordCloud(detail.word_cloud_path);
-                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
-                    if (detail.total_count != 0) that.totalNum = detail.total_count;
-                    if (that.pageNum == '') that.pageNum = 1;
-
-                    window.scrollTo(0, 0);
-                }, function (res) {
-                    console.log(res);
-                });
-            } else if (this.$route.query.extra_org_name) {
-                var _params = { 'organization_name': this.$route.query.extra_org_name, 'professor_name': content };
-                this.$http.post("http://qsz.lkc1621.xyz/api/v1/search_professor_nb", _params).then(function (res) {
-                    console.log(res);
-                    var detail = JSON.parse(res.body);
-                    console.log(detail);
-                    that.search_results = detail.msg;
-                    that.type = item;
-                    that.wordcloud_show = false;
-                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
-                    if (detail.total_count != 0) that.totalNum = detail.total_count;
-                    if (that.pageNum == '') that.pageNum = 1;
-
-                    window.scrollTo(0, 0);
-                }, function (res) {
-                    console.log(res);
-                });
-            } else {
-                var param = { 'page_num': this.pageNum };
-                console.log(param);
-                this.$http.get(this.GLOBAL.domain + "/api/v1/search_" + item + "/" + content, { params: param }).then(function (res) {
-                    var detail = JSON.parse(res.body);
-                    console.log("search success");
-                    console.log(detail);
-                    that.search_results = detail.msg;
-                    that.type = item;
-                    console.log(that.GLOBAL.wordcloud_path);
-                    if (detail.reason == "未搜索到该专家" || detail.reason == "未查找到相关论文" || detail.reason == "未查找到相关机构") alert(detail.reason);
-                    if (item == 'paper' || item == 'organization') {
-                        that.totalNum = detail.count;
-                        if (item == 'paper') {
-                            that.wordcloud_show = true;
-                            if (that.pageNum == '') that.GLOBAL.setWordCloud(detail.word_cloud_path);
-                        }
-                    }
-                    if (that.pageNum == '') that.pageNum = 1;
-                    window.scrollTo(0, 0);
-                }, function (res) {
-                    console.log(res);
-                });
-            }
-        },
-        search: function search(item, content) {
-            if (item == "") {
-                alert("请输入搜索类型");
-                return;
-            }
-            if (content == "") return;
-            this.pageNum = '';
-            var that = this;
-
-            this.$router.push({
-                query: {
-                    search_content: content,
-                    search_type: item
-                }
-            });
-            console.log("item + " + item + "; search + " + content);
-            this.getSearchDetails(item, content);
-        },
-        change_page: function change_page(value) {
-
-            this.pageNum = value;
-            this.getSearchDetails(this.$route.query.search_type, this.$route.query.search_content);
-        }
-    },
-    computed: {}
-
-});
-
-/***/ }),
-
-/***/ 859:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 877:
+/***/ 549:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "aboutUs",
     staticStyle: {
-      "min-width": "900px"
+      "background": "#515a6e",
+      "height": "80px"
     }
-  }, [_c('div', {
-    staticClass: "top_xf"
-  }, [_c('MenuBar', {
-    attrs: {
-      "input": true,
-      "search_content": this.$route.query.search_content,
-      "search_item": this.$route.query.search_type
-    },
-    on: {
-      "search": _vm.search
-    }
-  })], 1), _vm._v(" "), _c('div', {
-    staticClass: "sc_detail",
-    attrs: {
-      "id": "showArea"
-    }
-  }, [(_vm.wordcloud_show) ? _c('Button', {
+  }, [_c('span', {
     staticStyle: {
-      "margin-left": "70%"
-    },
-    on: {
-      "click": _vm.check_word_cloud
+      "font-size": "16px"
     }
-  }, [_vm._v("点击查看词云")]) : _vm._e(), _vm._v(" "), _c('Modal', {
-    attrs: {
-      "draggable": "",
-      "scrollable": "",
-      "title": "词云"
-    },
-    model: {
-      value: (_vm.wordcloud_modal),
-      callback: function($$v) {
-        _vm.wordcloud_modal = $$v
-      },
-      expression: "wordcloud_modal"
-    }
-  }, [(_vm.wordcloud_modal) ? _c('div', {
+  }, [_c('a', {
     staticStyle: {
-      "text-align": "center"
+      "color": "#ffffff"
     }
-  }, [_c('img', {
+  }, [_vm._v("科技资源共享平台")])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('span', {
     staticStyle: {
-      "display": "block",
-      "width": "100%",
-      "height": "380px",
-      "object-fit": "cover"
-    },
-    attrs: {
-      "src": this.GLOBAL.wordcloud_path
+      "font-size": "14px"
     }
-  })]) : _vm._e(), _vm._v(" "), _c('div', {
-    attrs: {
-      "slot": "footer"
-    },
-    slot: "footer"
-  }, [_c('Button', {
-    attrs: {
-      "type": "primary",
-      "size": "large"
-    },
-    on: {
-      "click": _vm.quit_word_cloud
-    }
-  }, [_vm._v("确定")])], 1)]), _vm._v(" "), _vm._l((_vm.search_results), function(item) {
-    return _c('div', {
-      staticClass: "sc_content"
-    }, [(_vm.type == 'paper') ? _c('div', [_c('div', {
-      staticClass: "c_font"
-    }, [_c('router-link', {
-      attrs: {
-        "tag": "a",
-        "to": {
-          path: '/paperDetails',
-          query: {
-            paperID: item.paperid
-          }
-        },
-        "target": "_blank"
-      },
-      domProps: {
-        "innerHTML": _vm._s(item.name)
-      }
-    }, [_vm._v(_vm._s(item.name))])], 1), _vm._v(" "), _c('div', {
-      staticClass: "c_abstract",
-      domProps: {
-        "innerHTML": _vm._s(item.abstract)
-      }
-    }, [_vm._v(_vm._s(item.abstract))]), _vm._v(" "), _c('div', {
-      staticClass: "paper-author"
-    }, [_c('b', [_vm._v("作者：")]), _vm._v(" "), _vm._l((item.author), function(value, key) {
-      return _c('span', {
-        staticStyle: {
-          "display": "inline"
-        }
-      }, [_c('div', {
-        staticStyle: {
-          "display": "inline"
-        },
-        domProps: {
-          "innerHTML": _vm._s(value)
-        }
-      }, [_vm._v("\n                            " + _vm._s(value) + "\n                        ")]), _vm._v("  \n                    ")])
-    }), _vm._v(" "), _c('b', [_vm._v("年份：")]), _vm._v(" "), _c('span', {
-      staticStyle: {
-        "display": "inline"
-      },
-      domProps: {
-        "innerHTML": _vm._s(item.year)
-      }
-    }, [_vm._v(_vm._s(item.year))]), _c('br'), _vm._v(" "), _c('b', [_vm._v("来源：")]), _vm._v(" "), _c('span', {
-      staticStyle: {
-        "display": "inline"
-      }
-    }, [_vm._v("\n                          \n                        "), _c('div', {
-      staticStyle: {
-        "display": "inline"
-      },
-      domProps: {
-        "innerHTML": _vm._s(item.source_journal.name)
-      }
-    }, [_vm._v("\n                            " + _vm._s(item.source_journal.name) + "\n                        ")]), _vm._v("    \n                        "), _c('div', {
-      staticStyle: {
-        "display": "inline"
-      },
-      domProps: {
-        "innerHTML": _vm._s(item.source_journal.date)
-      }
-    }, [_vm._v("\n                            " + _vm._s(item.source_journal.date) + "\n                        ")]), _vm._v("\n                            \n                    ")]), _c('br')], 2), _vm._v(" "), _c('div', {
-      staticClass: "paper-key"
-    }, [_c('b', [_vm._v("关键词：")]), _vm._v(" "), _vm._l((item.keyword), function(keyword) {
-      return _c('div', {
-        staticStyle: {
-          "display": "inline"
-        }
-      }, [_c('div', {
-        staticStyle: {
-          "display": "inline"
-        },
-        domProps: {
-          "innerHTML": _vm._s(keyword)
-        }
-      }, [_vm._v(_vm._s(keyword))]), _vm._v(" ")])
-    })], 2), _vm._v(" "), _c('Divider')], 1) : (_vm.type == 'professor') ? _c('div', [_c('div', {
-      staticClass: "searchResultItem"
-    }, [_c('router-link', {
-      staticClass: "searchResult_pic",
-      attrs: {
-        "tag": "a",
-        "to": {
-          path: '/professorDetails',
-          query: {
-            profID: item.scid
-          }
-        },
-        "target": "_blank"
-      }
-    }, [_c('img', {
-      attrs: {
-        "src": __webpack_require__(407),
-        "alt": "图片",
-        "width": "64",
-        "height": "64"
-      }
-    })]), _vm._v(" "), _c('div', {
-      staticClass: "searchResult_text"
-    }, [_c('router-link', {
-      staticClass: "personName",
-      attrs: {
-        "to": {
-          path: '/professorDetails',
-          query: {
-            profID: item.scid
-          }
-        },
-        "target": "_blank"
-      }
-    }, [_c('div', {
-      attrs: {
-        "id": "professorName"
-      },
-      domProps: {
-        "innerHTML": _vm._s(item.name)
-      }
-    }, [_vm._v(_vm._s(item.name))])]), _vm._v(" "), _c('p', {
-      staticClass: "personInstitution",
-      domProps: {
-        "innerHTML": _vm._s(item.mechanism)
-      }
-    }, [_vm._v(_vm._s(item.mechanism))]), _vm._v(" "), _c('div', {
-      staticClass: "personNum"
-    }, [_c('p', {
-      staticClass: "personNumItem"
-    }, [_c('span', [_vm._v("发表文章：")]), _vm._v(" "), _c('span', {
-      staticClass: "color_black"
-    }, [_vm._v(_vm._s(item.resultsnumber))])]), _vm._v(" "), _c('p', {
-      staticClass: "personNumItem"
-    }, [_c('span', [_vm._v("被引次数：")]), _vm._v(" "), _c('span', {
-      staticClass: "color_black"
-    }, [_vm._v(_vm._s(item.citedtimes))])])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('div', {
-      staticClass: "personField"
-    }, [_c('span', {
-      staticStyle: {
-        "display": "inline-block"
-      }
-    }, [_vm._v("研究领域：")]), _vm._v(" "), _vm._l((item.field), function(field) {
-      return _c('div', {
-        staticClass: "color_black",
-        staticStyle: {
-          "display": "inline"
-        }
-      }, [_vm._v("\n                                " + _vm._s(field) + " \n                            ")])
-    })], 2)], 1)], 1)]) : (_vm.type == 'organization') ? _c('div', [_c('div', {
-      staticClass: "c_font"
-    }, [_c('a', {
-      attrs: {
-        "href": item.url,
-        "target": "_blank"
-      }
-    }, [_vm._v(_vm._s(item.mechanism))])]), _vm._v(" "), _vm._l((item.introduction), function(intro) {
-      return _c('div', {
-        staticClass: "c_abstract"
-      }, [_vm._v(_vm._s(intro))])
-    }), _vm._v(" "), _c('Divider')], 2) : _vm._e()])
-  }), _vm._v(" "), (this.$route.query.search_type == 'paper' || this.$route.query.search_type == 'organization') ? _c('div', {
+  }, [_c('a', {
     staticStyle: {
-      "margin": "3% 20% 10% 0"
+      "color": "#ffffff"
     }
-  }, [_c('Page', {
-    staticStyle: {
-      "text-align": "center"
-    },
-    attrs: {
-      "current": _vm.pageNum,
-      "total": _vm.totalNum,
-      "page-size": 10,
-      "simple": ""
-    },
-    on: {
-      "on-change": _vm.change_page
-    }
-  })], 1) : _vm._e(), _vm._v(" "), _c('BackTop', {
-    attrs: {
-      "height": 100,
-      "bottom": 200
-    }
-  }, [_c('Icon', {
-    staticClass: "top",
-    attrs: {
-      "type": "md-arrow-up"
-    }
-  }), _vm._v(" "), _c('br'), _vm._v("返回顶端\n        ")], 1)], 2)])
-},staticRenderFns: []}
+  }, [_vm._v("联系我们：1137559912@qq.com")])])])])
+}]}
 module.exports.render._withStripped = true
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-5dd27f4d", module.exports)
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-41345060", module.exports)
   }
 }
+
+/***/ }),
+
+/***/ 746:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(547);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menuBar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__aboutUs_vue__ = __webpack_require__(546);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__aboutUs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__aboutUs_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a,
+        AboutUs: __WEBPACK_IMPORTED_MODULE_2__aboutUs_vue___default.a,
+        'my-upload': __WEBPACK_IMPORTED_MODULE_1_vue_image_crop_upload___default.a
+    },
+    name: "setting",
+    data: function data() {
+        var _this = this;
+
+        return {
+            previewImageSrc: '',
+            userName: '',
+            identity: this.GLOBAL.userType,
+            //identity:'EXPERT', //EXPERT USER VISITOR
+            //old_pwd:'123',
+            //change_pwd: false,
+            show: false,
+            upload_url: this.GLOBAL.domain + '/api/v1/upload_avatar',
+            params: {
+                token: '123456798',
+                name: 'avatar'
+            },
+            headers: {
+                smail: '*_~'
+            },
+            imgDataUrl: this.GLOBAL.avatar, // the datebase64 url of created image
+            change_name: {
+                name: ''
+            },
+            change_pwd: {
+                old_password: '',
+                password: '',
+                cpwd: ''
+            },
+            change_name_rule: {
+                name: [{ required: true, message: '用户名不能为空', trigger: 'blur' }]
+            },
+            change_pwd_rule: {
+                old_password: [{ required: true, message: '旧密码不能为空', trigger: 'blur' }],
+                password: [{ required: true, message: '密码不能为空', trigger: 'blur' }],
+                cpwd: [{ required: true, message: '密码不能为空', trigger: 'blur' }, {
+                    validator: function validator(rule, value, callback) {
+                        if (value === '') {
+                            callback(new Error('请再次输入密码'));
+                        } else if (value !== _this.change_pwd.password) {
+                            callback(new Error('两次输入密码不一致'));
+                        } else {
+                            callback();
+                        }
+                    }, trigger: 'blur' }]
+            }
+        };
+    },
+
+    methods: {
+        handleSubmit: function handleSubmit(name) {
+            var _this2 = this;
+
+            // console.log(name);
+            console.log(this.GLOBAL.userName);
+            this.$refs[name].validate(function (valid) {
+                if (valid) {
+                    if (name === 'change_name') {
+                        console.log('if ' + _this2.change_name.name);
+                        // this.GLOBAL.setUserName(this.change_name.name);
+                        // console.log('this is ' + this.GLOBAL.userName)
+                        var params = { 'user_id': _this2.GLOBAL.email, 'username': _this2.change_name.name };
+                        _this2.$http.post(_this2.GLOBAL.domain + '/api/v1/information_change', params).then(function (res) {
+                            var detail = JSON.parse(res.body);
+                            console.log(detail);
+                            if (detail.state === 'success') {
+                                this.refresh_user_info();
+                                this.$Message.success('修改成功!');
+                            } else {
+                                this.$Message.error('修改失败!');
+                            }
+                        }, function (res) {
+                            console.log('Failed');
+                            var detail = JSON.parse(res.body);
+                            console.log(detail);
+                        });
+                    } else if (name === 'change_pwd') {
+                        console.log('else if');
+                        var _params = { 'user_id': _this2.GLOBAL.email, 'old_password': _this2.change_pwd.old_password, 'new_password': _this2.change_pwd.password };
+                        console.log(_params);
+                        _this2.$http.post(_this2.GLOBAL.domain + '/api/v1/password_change', _params).then(function (res) {
+                            var detail = JSON.parse(res.body);
+                            console.log(detail);
+                            if (detail.state === 'fail') {
+                                this.$Message.error(detail.reason);
+                            } else {
+                                this.$Message.success(detail.reason);
+                            }
+                        }, function (res) {
+                            console.log('Failed');
+                            var detail = JSON.parse(res.body);
+                            console.log(detail);
+                        });
+                    } else {
+                        console.log('else');
+                    }
+                    _this2.$refs[name].resetFields();
+                    // this.$Message.success('提交成功!')
+                } else {
+                    _this2.$Message.error('表单验证失败!');
+                }
+            });
+        },
+        handleReset: function handleReset(name) {
+            if (this.identity !== 'EXPERT') this.$refs[name].resetFields();
+        },
+        displayImage: function displayImage() {
+            var _this3 = this;
+
+            var file = this.$refs.fileInput.files[0];
+            var fr = new FileReader();
+            fr.onload = function (e) {
+                _this3.previewImageSrc = e.target.result;
+            };
+            fr.readAsDataURL(file);
+        },
+        upload: function upload() {
+            if (this.previewImageSrc == "") return;
+            alert("cxk");
+        },
+        refresh_user_info: function refresh_user_info() {
+            this.$http.get(this.GLOBAL.domain + '/api/v1/user_detail/' + this.GLOBAL.email).then(function (res) {
+                var detail = JSON.parse(res.body);
+                console.log(detail);
+                this.GLOBAL.setUserName(detail.msg.username);
+                this.GLOBAL.setAvatar(detail.msg.avatar);
+            }, function (res) {
+                console.log('Failed');
+                var detail = JSON.parse(res.body);
+                console.log(detail);
+            });
+        },
+        toggleShow: function toggleShow() {
+            this.show = !this.show;
+        },
+        cropSuccess: function cropSuccess(imgDataUrl, field) {
+            console.log('-------- crop success --------');
+            this.imgDataUrl = imgDataUrl;
+        },
+
+        /**
+        * upload success
+        *
+        * [param] jsonData   服务器返回数据，已进行json转码
+        * [param] field
+        */
+        cropUploadSuccess: function cropUploadSuccess(jsonData, field) {
+            console.log('-------- upload success --------');
+            console.log(jsonData);
+            console.log('field: ' + field);
+            var detail = JSON.parse(jsonData);
+            console.log(detail.url);
+            if (detail.state == 'success') {
+                var params = { 'user_id': this.GLOBAL.email, 'avatar': detail.url };
+                this.$http.post(this.GLOBAL.domain + '/api/v1/information_change', params).then(function (res) {
+                    var detail = JSON.parse(res.body);
+                    console.log(detail);
+                    if (detail.state === 'success') {
+                        this.refresh_user_info();
+                        this.show = !this.show;
+                        this.$Message.success('修改成功!');
+                    } else {
+                        this.$Message.error('修改失败!');
+                    }
+                }, function (res) {
+                    console.log('Failed');
+                    var detail = JSON.parse(res.body);
+                    console.log(detail);
+                });
+            } else {
+                this.$Message.error('服务器出错，上传失败');
+            }
+        },
+
+        /**
+         * upload fail
+         *
+         * [param] status    server api return error status, like 500
+         * [param] field
+         */
+        cropUploadFail: function cropUploadFail(status, field) {
+            console.log('-------- upload fail --------');
+            console.log(status);
+            console.log('field: ' + field);
+        }
+    }
+});
 
 /***/ })
 

@@ -1,18 +1,752 @@
 webpackJsonp([1],{
 
-/***/ 366:
+/***/ 1010:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 1011:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 1026:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "news_page",
+    staticStyle: {
+      "width": "100%",
+      "background-color": "white",
+      "height": "650px"
+    }
+  }, [_c('MenuBar', {
+    staticStyle: {
+      "background": "#515a6e"
+    },
+    on: {
+      "user": function($event) {
+        _vm.identity = 'USER'
+      },
+      "visitor": function($event) {
+        _vm.identity = 'VISITOR'
+      },
+      "expert": function($event) {
+        _vm.identity = 'EXPERT'
+      },
+      "admin": function($event) {
+        _vm.identity = 'ADMIN'
+      }
+    }
+  }), _vm._v(" "), (_vm.identity == 'VISITOR') ? _c('div', {
+    staticStyle: {
+      "width": "100%",
+      "text-align": "center",
+      "height": "480px"
+    }
+  }, [_vm._m(0)]) : _c('div', {
+    staticStyle: {
+      "margin-top": "60px"
+    }
+  }, [_c('Row', [_c('Col', {
+    attrs: {
+      "span": "7"
+    }
+  }, [_c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (false),
+      expression: "false"
+    }],
+    staticClass: "user-intro",
+    staticStyle: {
+      "text-align": "center",
+      "width": "100%",
+      "margin-top": "20px",
+      "margin-bottom": "20px"
+    }
+  }, [_c('div', {
+    staticClass: "person-image",
+    staticStyle: {
+      "text-align": "center"
+    }
+  }, [_c('img', {
+    staticStyle: {
+      "margin": "5px"
+    },
+    attrs: {
+      "src": __webpack_require__(574),
+      "height": "50px"
+    }
+  })]), _vm._v(" "), _c('div', {
+    staticClass: "person-detail"
+  }, [_vm._v("\n                            用户名：" + _vm._s(this.GLOBAL.userName) + "\n                            "), _c('br'), _vm._v("\n                            邮箱：" + _vm._s(this.GLOBAL.email) + "\n                        ")])]), _vm._v(" "), _c('Menu', {
+    staticStyle: {
+      "padding-top": "20px",
+      "max-width": "80%",
+      "z-index": "0"
+    },
+    attrs: {
+      "theme": _vm.theme3,
+      "active-name": "1"
+    }
+  }, [_c('MenuItem', {
+    attrs: {
+      "name": "1"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.news_type = 'comments'
+      }
+    }
+  }, [_c('Icon', {
+    attrs: {
+      "type": "md-chatbubbles"
+    }
+  }), _vm._v("\n                            评论\n                        ")], 1), _vm._v(" "), _c('MenuItem', {
+    attrs: {
+      "name": "3"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.news_type = 'system'
+      }
+    }
+  }, [_c('Icon', {
+    attrs: {
+      "type": "md-alert"
+    }
+  }), _vm._v("\n                            系统通知\n                        ")], 1), _vm._v(" "), (_vm.identity == 'ADMIN') ? _c('MenuItem', {
+    attrs: {
+      "name": "4"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.news_type = 'verify'
+      }
+    }
+  }, [_c('Icon', {
+    attrs: {
+      "type": "md-checkbox"
+    }
+  }), _vm._v("\n                            认证信息\n                        ")], 1) : _vm._e()], 1)], 1), _vm._v(" "), _c('Modal', {
+    attrs: {
+      "width": "240"
+    },
+    model: {
+      value: (_vm.modal_delete),
+      callback: function($$v) {
+        _vm.modal_delete = $$v
+      },
+      expression: "modal_delete"
+    }
+  }, [_c('p', {
+    staticStyle: {
+      "color": "#f60",
+      "text-align": "center"
+    },
+    attrs: {
+      "slot": "header"
+    },
+    slot: "header"
+  }, [_c('Icon', {
+    attrs: {
+      "type": "ios-information-circle"
+    }
+  }), _vm._v(" "), _c('span', [_vm._v("删除确认")])], 1), _vm._v(" "), _c('div', {
+    staticStyle: {
+      "text-align": "center"
+    }
+  }, [_c('p', {
+    staticStyle: {
+      "font-size": "16px"
+    }
+  }, [_vm._v("您是否要删除该信息")])]), _vm._v(" "), _c('div', {
+    attrs: {
+      "slot": "footer"
+    },
+    slot: "footer"
+  }, [_c('Button', {
+    attrs: {
+      "type": "error",
+      "size": "large",
+      "long": ""
+    },
+    on: {
+      "click": _vm.del
+    }
+  }, [_vm._v("删除")])], 1)]), _vm._v(" "), _c('Modal', {
+    attrs: {
+      "width": "240"
+    },
+    model: {
+      value: (_vm.modal_clean),
+      callback: function($$v) {
+        _vm.modal_clean = $$v
+      },
+      expression: "modal_clean"
+    }
+  }, [_c('p', {
+    staticStyle: {
+      "color": "#2baee9",
+      "text-align": "center"
+    },
+    attrs: {
+      "slot": "header"
+    },
+    slot: "header"
+  }, [_c('Icon', {
+    attrs: {
+      "type": "ios-information-circle"
+    }
+  }), _vm._v(" "), _c('span', [_vm._v("清空确认")])], 1), _vm._v(" "), _c('div', {
+    staticStyle: {
+      "text-align": "center"
+    }
+  }, [_c('p', {
+    staticStyle: {
+      "font-size": "16px"
+    }
+  }, [_vm._v("您是否要清空该页面所有信息")])]), _vm._v(" "), _c('div', {
+    attrs: {
+      "slot": "footer"
+    },
+    slot: "footer"
+  }, [_c('Button', {
+    attrs: {
+      "type": "warning",
+      "size": "large",
+      "long": ""
+    },
+    on: {
+      "click": _vm.delete_news
+    }
+  }, [_vm._v("清空")])], 1)]), _vm._v(" "), _c('Modal', {
+    attrs: {
+      "draggable": "",
+      "scrollable": "",
+      "title": "消息详情"
+    },
+    model: {
+      value: (_vm.modal_msg),
+      callback: function($$v) {
+        _vm.modal_msg = $$v
+      },
+      expression: "modal_msg"
+    }
+  }, [_c('div', {
+    staticStyle: {
+      "font-size": "13px",
+      "margin": "10px"
+    }
+  }, [_vm._v("\n                        " + _vm._s(_vm.news_detail) + "\n                    ")]), _vm._v(" "), _c('div', {
+    attrs: {
+      "slot": "footer"
+    },
+    slot: "footer"
+  }, [_c('Button', {
+    attrs: {
+      "type": "primary",
+      "size": "large"
+    },
+    on: {
+      "click": _vm.check_news
+    }
+  }, [_vm._v("确定")])], 1)]), _vm._v(" "), _c('Modal', {
+    attrs: {
+      "draggable": "",
+      "scrollable": "",
+      "title": "申请人详细信息"
+    },
+    model: {
+      value: (_vm.modal_verify),
+      callback: function($$v) {
+        _vm.modal_verify = $$v
+      },
+      expression: "modal_verify"
+    }
+  }, [_c('div', {
+    staticStyle: {
+      "font-size": "14px"
+    },
+    model: {
+      value: (_vm.apply_msg),
+      callback: function($$v) {
+        _vm.apply_msg = $$v
+      },
+      expression: "apply_msg"
+    }
+  }, [_c('Row', [_c('Col', {
+    staticStyle: {
+      "text-align": "right"
+    },
+    attrs: {
+      "span": "8"
+    }
+  }, [_vm._v("\n                                姓名："), _c('br'), _vm._v("\n                                Email："), _c('br'), _vm._v("\n                                绑定ScholarID："), _c('br'), _vm._v("\n                                邮箱："), _c('br'), _vm._v("\n                                专家领域："), _c('br'), _vm._v("\n                                备注："), _c('br'), _vm._v("\n                                申请日期："), _c('br'), _vm._v("\n                                申请状态："), _c('br')]), _vm._v(" "), _c('Col', {
+    attrs: {
+      "span": "16"
+    }
+  }, [_vm._v("\n                                " + _vm._s(_vm.apply_msg.name) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.email) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.scid) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.ID) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.field) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.text) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.date) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.state)), _c('br')])], 1)], 1), _vm._v(" "), _c('div', {
+    attrs: {
+      "slot": "footer"
+    },
+    slot: "footer"
+  }, [_c('Button', {
+    attrs: {
+      "type": "success",
+      "size": "large",
+      "disabled": _vm.apply_msg.state !== 'waiting'
+    },
+    on: {
+      "click": function($event) {
+        return _vm.check_verify('Yes')
+      }
+    }
+  }, [_vm._v("同意")]), _vm._v(" "), _c('Button', {
+    attrs: {
+      "type": "error",
+      "size": "large",
+      "disabled": _vm.apply_msg.state !== 'waiting'
+    },
+    on: {
+      "click": function($event) {
+        return _vm.check_verify('No')
+      }
+    }
+  }, [_vm._v("拒绝")])], 1)]), _vm._v(" "), _c('Col', {
+    staticStyle: {
+      "padding-top": "30px",
+      "margin": "0px",
+      "min-height": "470px"
+    },
+    attrs: {
+      "span": "16"
+    }
+  }, [(_vm.news_type == 'comments') ? _c('div', {
+    staticClass: "comments_news"
+  }, [_c('Button', {
+    staticStyle: {
+      "float": "right"
+    },
+    on: {
+      "click": function($event) {
+        _vm.modal_clean = true
+      }
+    }
+  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("评论消息页")]), _vm._v(" "), _c('div', {
+    staticClass: "message-list"
+  }, [_c('ul', {
+    staticStyle: {
+      "list-style-type": "none",
+      "margin-left": "5px",
+      "margin-top": "5px"
+    }
+  }, _vm._l((_vm.comments_news), function(item) {
+    return _c('li', [_c('div', {
+      staticClass: "relevant-detail"
+    }, [_c('Row', [_c('Col', {
+      attrs: {
+        "span": "19"
+      }
+    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
+      staticStyle: {
+        "display": "inline",
+        "color": "#8391a5",
+        "font-size": "12px",
+        "margin-left": "10px",
+        "float": "right"
+      }
+    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
+      attrs: {
+        "span": "5"
+      }
+    }, [_c('el-button', {
+      staticStyle: {
+        "float": "right",
+        "margin-left": "5px"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_del_modal(item.msg_id)
+        }
+      }
+    }, [_vm._v("删除")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'Yes'),
+        expression: "item.status == 'Yes'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      }
+    }, [_vm._v("已查看")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'No'),
+        expression: "item.status == 'No'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "primary",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_msg_modal(item.content, item.msg_id)
+        }
+      }
+    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
+      attrs: {
+        "dashed": ""
+      }
+    })], 1)
+  }), 0)])], 1) : _vm._e(), _vm._v(" "), (_vm.news_type == 'like') ? _c('div', {
+    staticClass: "like_news"
+  }, [_c('Button', {
+    staticStyle: {
+      "float": "right"
+    },
+    on: {
+      "click": function($event) {
+        _vm.modal_clean = true
+      }
+    }
+  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("关注消息页")]), _vm._v(" "), _c('div', {
+    staticClass: "message-list"
+  }, [_c('ul', {
+    staticStyle: {
+      "list-style-type": "none",
+      "margin-left": "5px",
+      "margin-top": "5px"
+    }
+  }, _vm._l((_vm.like_news), function(item) {
+    return _c('li', [_c('div', {
+      staticClass: "relevant-detail"
+    }, [_c('Row', [_c('Col', {
+      attrs: {
+        "span": "19"
+      }
+    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
+      staticStyle: {
+        "display": "inline",
+        "color": "#8391a5",
+        "font-size": "12px",
+        "margin-left": "10px",
+        "float": "right"
+      }
+    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
+      attrs: {
+        "span": "5"
+      }
+    }, [_c('el-button', {
+      staticStyle: {
+        "float": "right",
+        "margin-left": "5px"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_del_modal(item.msg_id)
+        }
+      }
+    }, [_vm._v("删除")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'Yes'),
+        expression: "item.status == 'Yes'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      }
+    }, [_vm._v("已查看")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'No'),
+        expression: "item.status == 'No'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "primary",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_msg_modal(item.content, item.msg_id)
+        }
+      }
+    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
+      attrs: {
+        "dashed": ""
+      }
+    })], 1)
+  }), 0)])], 1) : _vm._e(), _vm._v(" "), (_vm.news_type == 'system') ? _c('div', {
+    staticClass: "system_news"
+  }, [_c('Button', {
+    staticStyle: {
+      "float": "right"
+    },
+    on: {
+      "click": function($event) {
+        _vm.modal_clean = true
+      }
+    }
+  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("系统消息页")]), _vm._v(" "), _c('div', {
+    staticClass: "message-list"
+  }, [_c('ul', {
+    staticStyle: {
+      "list-style-type": "none",
+      "margin-left": "5px",
+      "margin-top": "5px"
+    }
+  }, _vm._l((_vm.system_news), function(item) {
+    return _c('li', [_c('div', {
+      staticClass: "relevant-detail"
+    }, [_c('Row', [_c('Col', {
+      attrs: {
+        "span": "19"
+      }
+    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
+      staticStyle: {
+        "display": "inline",
+        "color": "#8391a5",
+        "font-size": "12px",
+        "margin-left": "10px",
+        "float": "right"
+      }
+    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
+      attrs: {
+        "span": "5"
+      }
+    }, [_c('el-button', {
+      staticStyle: {
+        "float": "right",
+        "margin-left": "5px"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_del_modal(item.msg_id)
+        }
+      }
+    }, [_vm._v("删除")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'Yes'),
+        expression: "item.status == 'Yes'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      }
+    }, [_vm._v("已查看")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'No'),
+        expression: "item.status == 'No'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "primary",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_msg_modal(item.content, item.msg_id)
+        }
+      }
+    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
+      attrs: {
+        "dashed": ""
+      }
+    })], 1)
+  }), 0)])], 1) : _vm._e(), _vm._v(" "), (_vm.news_type == 'verify') ? _c('div', {
+    staticClass: "verify_news"
+  }, [_c('Button', {
+    staticStyle: {
+      "float": "right"
+    },
+    on: {
+      "click": function($event) {
+        _vm.modal_clean = true
+      }
+    }
+  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("认证消息页")]), _vm._v(" "), _c('div', {
+    staticClass: "message-list"
+  }, [_c('ul', {
+    staticStyle: {
+      "list-style-type": "none",
+      "margin-left": "5px",
+      "margin-top": "5px"
+    }
+  }, _vm._l((_vm.verify_news), function(item) {
+    return _c('li', [_c('div', {
+      staticClass: "relevant-detail"
+    }, [_c('Row', [_c('Col', {
+      attrs: {
+        "span": "19"
+      }
+    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
+      staticStyle: {
+        "display": "inline",
+        "color": "#8391a5",
+        "font-size": "12px",
+        "margin-left": "10px",
+        "float": "right"
+      }
+    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
+      attrs: {
+        "span": "5"
+      }
+    }, [_c('el-button', {
+      staticStyle: {
+        "float": "right",
+        "margin-left": "5px"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_del_modal(item.msg_id)
+        }
+      }
+    }, [_vm._v("删除")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'Yes'),
+        expression: "item.status == 'Yes'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_verify_modal(item.apply_id, item.msg_id, item.status)
+        }
+      }
+    }, [_vm._v("已查看")]), _vm._v(" "), _c('el-button', {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: (item.status == 'No'),
+        expression: "item.status == 'No'"
+      }],
+      staticStyle: {
+        "float": "right"
+      },
+      attrs: {
+        "type": "info",
+        "size": "small",
+        "round": ""
+      },
+      on: {
+        "click": function($event) {
+          return _vm.show_verify_modal(item.apply_id, item.msg_id, item.status)
+        }
+      }
+    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
+      attrs: {
+        "dashed": ""
+      }
+    })], 1)
+  }), 0)])], 1) : _vm._e()])], 1), _vm._v(" "), _c('Layout', {
+    attrs: {
+      "id": "layout"
+    }
+  }, [_c('Footer', {
+    staticClass: "layout-footer-center",
+    staticStyle: {
+      "background-color": "#515a6e",
+      "color": "#515a6e"
+    }
+  }, [_c('AboutUs')], 1)], 1)], 1)], 1)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('h2', {
+    staticStyle: {
+      "margin-top": "80px"
+    }
+  }, [_vm._v("您还未登录！"), _c('br'), _vm._v(" 无法查看个人主页")])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-1b7adf5e", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 517:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(856)
-__webpack_require__(857)
+__webpack_require__(1010)
+__webpack_require__(1011)
 
-var Component = __webpack_require__(70)(
+var Component = __webpack_require__(98)(
   /* script */
-  __webpack_require__(588),
+  __webpack_require__(742),
   /* template */
-  __webpack_require__(875),
+  __webpack_require__(1026),
   /* scopeId */
   "data-v-1b7adf5e",
   /* cssModules */
@@ -40,7 +774,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 385:
+/***/ 538:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -81,25 +815,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 388:
+/***/ 539:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 389:
+/***/ 540:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(388)
+__webpack_require__(539)
 
-var Component = __webpack_require__(70)(
+var Component = __webpack_require__(98)(
   /* script */
-  __webpack_require__(385),
+  __webpack_require__(538),
   /* template */
-  __webpack_require__(390),
+  __webpack_require__(541),
   /* scopeId */
   "data-v-14f43d51",
   /* cssModules */
@@ -127,7 +861,7 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 390:
+/***/ 541:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -143,13 +877,37 @@ if (false) {
 
 /***/ }),
 
-/***/ 391:
+/***/ 542:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(389);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: "aboutUs"
+});
+
+/***/ }),
+
+/***/ 543:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__ = __webpack_require__(540);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__cookieUtil_vue__);
+//
+//
 //
 //
 //
@@ -208,7 +966,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             modal1: false,
             theme1: 'primary',
             index_url: '/',
-            register_url: '/register',
             email: '',
             password: '',
             identity: this.GLOBAL.userType,
@@ -288,6 +1045,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         setting: function setting() {
             this.$router.push({ path: '/setting' });
         },
+        jump_register: function jump_register() {
+            this.$router.push({ path: '/register' });
+        },
         logout: function logout() {
             this.GLOBAL.setUserType('VISITOR');
             this.identity = this.GLOBAL.userType;
@@ -313,25 +1073,71 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 392:
+/***/ 544:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 393:
+/***/ 545:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 546:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(392)
+__webpack_require__(545)
 
-var Component = __webpack_require__(70)(
+var Component = __webpack_require__(98)(
   /* script */
-  __webpack_require__(391),
+  __webpack_require__(542),
   /* template */
-  __webpack_require__(394),
+  __webpack_require__(549),
+  /* scopeId */
+  "data-v-41345060",
+  /* cssModules */
+  null
+)
+Component.options.__file = "D:\\大三上\\软件系统需求和设计\\frontend\\src\\views\\aboutUs.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] aboutUs.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-41345060", Component.options)
+  } else {
+    hotAPI.reload("data-v-41345060", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 547:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(544)
+
+var Component = __webpack_require__(98)(
+  /* script */
+  __webpack_require__(543),
+  /* template */
+  __webpack_require__(548),
   /* scopeId */
   "data-v-3baacb0e",
   /* cssModules */
@@ -359,11 +1165,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 394:
+/***/ 548:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('Menu', {
+    staticClass: "menutype",
     staticStyle: {
       "width": "100%",
       "position": "fixed"
@@ -389,7 +1196,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-home",
       "size": "20"
     }
-  }), _vm._v("\n            首页\n        ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
+  }), _vm._v("\n                首页\n            ")], 1)], 1), _vm._v(" "), (_vm.input) ? _c('MenuItem', {
     attrs: {
       "name": "5"
     }
@@ -467,7 +1274,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "ios-contact",
       "size": "20"
     }
-  }), _vm._v("\n            " + _vm._s(this.GLOBAL.userName) + "\n        ")], 1), _vm._v(" "), _c('MenuItem', {
+  }), _vm._v("\n                " + _vm._s(this.GLOBAL.userName) + "\n            ")], 1), _vm._v(" "), _c('MenuItem', {
     attrs: {
       "name": "2-1"
     },
@@ -515,7 +1322,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.modal1 = true
       }
     }
-  }, [_vm._v("\n        登录\n        "), _c('Modal', {
+  }, [_vm._v("\n            登录\n            "), _c('Modal', {
     attrs: {
       "title": "登录",
       "ok-text": "登录",
@@ -585,16 +1392,25 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })])])], 1) : _vm._e(), _vm._v(" "), _c('a', {
     staticStyle: {
       "float": "right"
-    },
-    attrs: {
-      "href": _vm.register_url
     }
   }, [(_vm.identity == 'VISITOR') ? _c('MenuItem', {
     attrs: {
-      "href": _vm.register_url,
       "name": "4"
+    },
+    nativeOn: {
+      "click": function($event) {
+        _vm.modal1 = true
+      }
     }
-  }, [_vm._v("\n            注册\n        ")]) : _vm._e()], 1)], 1)
+  }, [_c('a', {
+    staticStyle: {
+      "size": "35px",
+      "color": "#ffffff"
+    },
+    on: {
+      "click": _vm.jump_register
+    }
+  }, [_vm._v("\n\t\t\t\t\t\t\t\t\t注册\n\t\t\t\t\t\t\t\t")])]) : _vm._e()], 1)], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -606,20 +1422,62 @@ if (false) {
 
 /***/ }),
 
-/***/ 407:
+/***/ 549:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "d4c0a1aaae1dba8d0c5d074236d58897.png";
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _vm._m(0)
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    staticClass: "aboutUs",
+    staticStyle: {
+      "background": "#515a6e",
+      "height": "80px"
+    }
+  }, [_c('span', {
+    staticStyle: {
+      "font-size": "16px"
+    }
+  }, [_c('a', {
+    staticStyle: {
+      "color": "#ffffff"
+    }
+  }, [_vm._v("科技资源共享平台")])]), _vm._v(" "), _c('br'), _vm._v(" "), _c('span', {
+    staticStyle: {
+      "font-size": "14px"
+    }
+  }, [_c('a', {
+    staticStyle: {
+      "color": "#ffffff"
+    }
+  }, [_vm._v("联系我们：1137559912@qq.com")])])])])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-41345060", module.exports)
+  }
+}
 
 /***/ }),
 
-/***/ 588:
+/***/ 574:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "2658742e6c6f222f5c8f65eec5f9ecc7.jpg";
+
+/***/ }),
+
+/***/ 742:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue__ = __webpack_require__(393);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__menuBar_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__aboutUs_vue__ = __webpack_require__(546);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__aboutUs_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__aboutUs_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menuBar_vue__ = __webpack_require__(547);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__menuBar_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__menuBar_vue__);
 //
 //
 //
@@ -868,12 +1726,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     components: {
-        MenuBar: __WEBPACK_IMPORTED_MODULE_0__menuBar_vue___default.a
+        MenuBar: __WEBPACK_IMPORTED_MODULE_1__menuBar_vue___default.a,
+        AboutUs: __WEBPACK_IMPORTED_MODULE_0__aboutUs_vue___default.a
     },
     name: "news",
     data: function data() {
@@ -1287,748 +2146,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.refresh_news();
     }
 });
-
-/***/ }),
-
-/***/ 856:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 857:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 870:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "1334c9184c32f14b8d38725b5ed83da2.png";
-
-/***/ }),
-
-/***/ 875:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "news_page",
-    staticStyle: {
-      "width": "100%",
-      "background-color": "white",
-      "height": "650px"
-    }
-  }, [_c('MenuBar', {
-    staticStyle: {
-      "background": "#515a6e"
-    },
-    on: {
-      "user": function($event) {
-        _vm.identity = 'USER'
-      },
-      "visitor": function($event) {
-        _vm.identity = 'VISITOR'
-      },
-      "expert": function($event) {
-        _vm.identity = 'EXPERT'
-      },
-      "admin": function($event) {
-        _vm.identity = 'ADMIN'
-      }
-    }
-  }), _vm._v(" "), (_vm.identity == 'VISITOR') ? _c('div', {
-    staticStyle: {
-      "width": "100%",
-      "text-align": "center",
-      "height": "450px"
-    }
-  }, [_c('img', {
-    staticStyle: {
-      "margin-left": "3%",
-      "height": "600px",
-      "width": "80%"
-    },
-    attrs: {
-      "src": __webpack_require__(870)
-    }
-  })]) : _c('div', {
-    staticStyle: {
-      "margin-top": "60px"
-    }
-  }, [_c('Row', [_c('Col', {
-    attrs: {
-      "span": "7"
-    }
-  }, [_c('div', {
-    directives: [{
-      name: "show",
-      rawName: "v-show",
-      value: (false),
-      expression: "false"
-    }],
-    staticClass: "user-intro",
-    staticStyle: {
-      "text-align": "center",
-      "width": "100%",
-      "margin-top": "20px",
-      "margin-bottom": "20px"
-    }
-  }, [_c('div', {
-    staticClass: "person-image",
-    staticStyle: {
-      "text-align": "center"
-    }
-  }, [_c('img', {
-    staticStyle: {
-      "margin": "5px"
-    },
-    attrs: {
-      "src": __webpack_require__(407),
-      "height": "50px"
-    }
-  })]), _vm._v(" "), _c('div', {
-    staticClass: "person-detail"
-  }, [_vm._v("\n                            用户名：" + _vm._s(this.GLOBAL.userName) + "\n                            "), _c('br'), _vm._v("\n                            邮箱：" + _vm._s(this.GLOBAL.email) + "\n                        ")])]), _vm._v(" "), _c('Menu', {
-    staticStyle: {
-      "padding-top": "20px",
-      "max-width": "80%",
-      "z-index": "0"
-    },
-    attrs: {
-      "theme": _vm.theme3,
-      "active-name": "1"
-    }
-  }, [_c('MenuItem', {
-    attrs: {
-      "name": "1"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.news_type = 'comments'
-      }
-    }
-  }, [_c('Icon', {
-    attrs: {
-      "type": "md-chatbubbles"
-    }
-  }), _vm._v("\n                            评论\n                        ")], 1), _vm._v(" "), _c('MenuItem', {
-    attrs: {
-      "name": "3"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.news_type = 'system'
-      }
-    }
-  }, [_c('Icon', {
-    attrs: {
-      "type": "md-alert"
-    }
-  }), _vm._v("\n                            系统通知\n                        ")], 1), _vm._v(" "), (_vm.identity == 'ADMIN') ? _c('MenuItem', {
-    attrs: {
-      "name": "4"
-    },
-    nativeOn: {
-      "click": function($event) {
-        _vm.news_type = 'verify'
-      }
-    }
-  }, [_c('Icon', {
-    attrs: {
-      "type": "md-checkbox"
-    }
-  }), _vm._v("\n                            认证信息\n                        ")], 1) : _vm._e()], 1)], 1), _vm._v(" "), _c('Modal', {
-    attrs: {
-      "width": "240"
-    },
-    model: {
-      value: (_vm.modal_delete),
-      callback: function($$v) {
-        _vm.modal_delete = $$v
-      },
-      expression: "modal_delete"
-    }
-  }, [_c('p', {
-    staticStyle: {
-      "color": "#f60",
-      "text-align": "center"
-    },
-    attrs: {
-      "slot": "header"
-    },
-    slot: "header"
-  }, [_c('Icon', {
-    attrs: {
-      "type": "ios-information-circle"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("删除确认")])], 1), _vm._v(" "), _c('div', {
-    staticStyle: {
-      "text-align": "center"
-    }
-  }, [_c('p', {
-    staticStyle: {
-      "font-size": "16px"
-    }
-  }, [_vm._v("您是否要删除该信息")])]), _vm._v(" "), _c('div', {
-    attrs: {
-      "slot": "footer"
-    },
-    slot: "footer"
-  }, [_c('Button', {
-    attrs: {
-      "type": "error",
-      "size": "large",
-      "long": ""
-    },
-    on: {
-      "click": _vm.del
-    }
-  }, [_vm._v("删除")])], 1)]), _vm._v(" "), _c('Modal', {
-    attrs: {
-      "width": "240"
-    },
-    model: {
-      value: (_vm.modal_clean),
-      callback: function($$v) {
-        _vm.modal_clean = $$v
-      },
-      expression: "modal_clean"
-    }
-  }, [_c('p', {
-    staticStyle: {
-      "color": "#2baee9",
-      "text-align": "center"
-    },
-    attrs: {
-      "slot": "header"
-    },
-    slot: "header"
-  }, [_c('Icon', {
-    attrs: {
-      "type": "ios-information-circle"
-    }
-  }), _vm._v(" "), _c('span', [_vm._v("清空确认")])], 1), _vm._v(" "), _c('div', {
-    staticStyle: {
-      "text-align": "center"
-    }
-  }, [_c('p', {
-    staticStyle: {
-      "font-size": "16px"
-    }
-  }, [_vm._v("您是否要清空该页面所有信息")])]), _vm._v(" "), _c('div', {
-    attrs: {
-      "slot": "footer"
-    },
-    slot: "footer"
-  }, [_c('Button', {
-    attrs: {
-      "type": "warning",
-      "size": "large",
-      "long": ""
-    },
-    on: {
-      "click": _vm.delete_news
-    }
-  }, [_vm._v("清空")])], 1)]), _vm._v(" "), _c('Modal', {
-    attrs: {
-      "draggable": "",
-      "scrollable": "",
-      "title": "消息详情"
-    },
-    model: {
-      value: (_vm.modal_msg),
-      callback: function($$v) {
-        _vm.modal_msg = $$v
-      },
-      expression: "modal_msg"
-    }
-  }, [_c('div', {
-    staticStyle: {
-      "font-size": "13px",
-      "margin": "10px"
-    }
-  }, [_vm._v("\n                        " + _vm._s(_vm.news_detail) + "\n                    ")]), _vm._v(" "), _c('div', {
-    attrs: {
-      "slot": "footer"
-    },
-    slot: "footer"
-  }, [_c('Button', {
-    attrs: {
-      "type": "primary",
-      "size": "large"
-    },
-    on: {
-      "click": _vm.check_news
-    }
-  }, [_vm._v("确定")])], 1)]), _vm._v(" "), _c('Modal', {
-    attrs: {
-      "draggable": "",
-      "scrollable": "",
-      "title": "申请人详细信息"
-    },
-    model: {
-      value: (_vm.modal_verify),
-      callback: function($$v) {
-        _vm.modal_verify = $$v
-      },
-      expression: "modal_verify"
-    }
-  }, [_c('div', {
-    staticStyle: {
-      "font-size": "14px"
-    },
-    model: {
-      value: (_vm.apply_msg),
-      callback: function($$v) {
-        _vm.apply_msg = $$v
-      },
-      expression: "apply_msg"
-    }
-  }, [_c('Row', [_c('Col', {
-    staticStyle: {
-      "text-align": "right"
-    },
-    attrs: {
-      "span": "8"
-    }
-  }, [_vm._v("\n                                姓名："), _c('br'), _vm._v("\n                                Email："), _c('br'), _vm._v("\n                                绑定ScholarID："), _c('br'), _vm._v("\n                                身份证号："), _c('br'), _vm._v("\n                                专家领域："), _c('br'), _vm._v("\n                                备注："), _c('br'), _vm._v("\n                                申请日期："), _c('br'), _vm._v("\n                                申请状态："), _c('br')]), _vm._v(" "), _c('Col', {
-    attrs: {
-      "span": "16"
-    }
-  }, [_vm._v("\n                                " + _vm._s(_vm.apply_msg.name) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.email) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.scid) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.ID) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.field) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.text) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.date) + " "), _c('br'), _vm._v("\n                                " + _vm._s(_vm.apply_msg.state)), _c('br')])], 1)], 1), _vm._v(" "), _c('div', {
-    attrs: {
-      "slot": "footer"
-    },
-    slot: "footer"
-  }, [_c('Button', {
-    attrs: {
-      "type": "success",
-      "size": "large",
-      "disabled": _vm.apply_msg.state !== 'waiting'
-    },
-    on: {
-      "click": function($event) {
-        return _vm.check_verify('Yes')
-      }
-    }
-  }, [_vm._v("同意")]), _vm._v(" "), _c('Button', {
-    attrs: {
-      "type": "error",
-      "size": "large",
-      "disabled": _vm.apply_msg.state !== 'waiting'
-    },
-    on: {
-      "click": function($event) {
-        return _vm.check_verify('No')
-      }
-    }
-  }, [_vm._v("拒绝")])], 1)]), _vm._v(" "), _c('Col', {
-    staticStyle: {
-      "padding-top": "30px",
-      "margin": "0px",
-      "min-height": "470px"
-    },
-    attrs: {
-      "span": "16"
-    }
-  }, [(_vm.news_type == 'comments') ? _c('div', {
-    staticClass: "comments_news"
-  }, [_c('Button', {
-    staticStyle: {
-      "float": "right"
-    },
-    on: {
-      "click": function($event) {
-        _vm.modal_clean = true
-      }
-    }
-  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("评论消息页")]), _vm._v(" "), _c('div', {
-    staticClass: "message-list"
-  }, [_c('ul', {
-    staticStyle: {
-      "list-style-type": "none",
-      "margin-left": "5px",
-      "margin-top": "5px"
-    }
-  }, _vm._l((_vm.comments_news), function(item) {
-    return _c('li', [_c('div', {
-      staticClass: "relevant-detail"
-    }, [_c('Row', [_c('Col', {
-      attrs: {
-        "span": "19"
-      }
-    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
-      staticStyle: {
-        "display": "inline",
-        "color": "#8391a5",
-        "font-size": "12px",
-        "margin-left": "10px",
-        "float": "right"
-      }
-    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
-      attrs: {
-        "span": "5"
-      }
-    }, [_c('Button', {
-      staticStyle: {
-        "float": "right",
-        "margin-left": "5px"
-      },
-      attrs: {
-        "type": "error",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_del_modal(item.msg_id)
-        }
-      }
-    }, [_vm._v("删除")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'Yes'),
-        expression: "item.status == 'Yes'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "success",
-        "size": "small"
-      }
-    }, [_vm._v("已查看")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'No'),
-        expression: "item.status == 'No'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "info",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_msg_modal(item.content, item.msg_id)
-        }
-      }
-    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
-      attrs: {
-        "dashed": ""
-      }
-    })], 1)
-  }), 0)])], 1) : _vm._e(), _vm._v(" "), (_vm.news_type == 'like') ? _c('div', {
-    staticClass: "like_news"
-  }, [_c('Button', {
-    staticStyle: {
-      "float": "right"
-    },
-    on: {
-      "click": function($event) {
-        _vm.modal_clean = true
-      }
-    }
-  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("关注消息页")]), _vm._v(" "), _c('div', {
-    staticClass: "message-list"
-  }, [_c('ul', {
-    staticStyle: {
-      "list-style-type": "none",
-      "margin-left": "5px",
-      "margin-top": "5px"
-    }
-  }, _vm._l((_vm.like_news), function(item) {
-    return _c('li', [_c('div', {
-      staticClass: "relevant-detail"
-    }, [_c('Row', [_c('Col', {
-      attrs: {
-        "span": "19"
-      }
-    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
-      staticStyle: {
-        "display": "inline",
-        "color": "#8391a5",
-        "font-size": "12px",
-        "margin-left": "10px",
-        "float": "right"
-      }
-    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
-      attrs: {
-        "span": "5"
-      }
-    }, [_c('Button', {
-      staticStyle: {
-        "float": "right",
-        "margin-left": "5px"
-      },
-      attrs: {
-        "type": "error",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_del_modal(item.msg_id)
-        }
-      }
-    }, [_vm._v("删除")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'Yes'),
-        expression: "item.status == 'Yes'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "success",
-        "size": "small"
-      }
-    }, [_vm._v("已查看")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'No'),
-        expression: "item.status == 'No'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "info",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_msg_modal(item.content, item.msg_id)
-        }
-      }
-    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
-      attrs: {
-        "dashed": ""
-      }
-    })], 1)
-  }), 0)])], 1) : _vm._e(), _vm._v(" "), (_vm.news_type == 'system') ? _c('div', {
-    staticClass: "system_news"
-  }, [_c('Button', {
-    staticStyle: {
-      "float": "right"
-    },
-    on: {
-      "click": function($event) {
-        _vm.modal_clean = true
-      }
-    }
-  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("系统消息页")]), _vm._v(" "), _c('div', {
-    staticClass: "message-list"
-  }, [_c('ul', {
-    staticStyle: {
-      "list-style-type": "none",
-      "margin-left": "5px",
-      "margin-top": "5px"
-    }
-  }, _vm._l((_vm.system_news), function(item) {
-    return _c('li', [_c('div', {
-      staticClass: "relevant-detail"
-    }, [_c('Row', [_c('Col', {
-      attrs: {
-        "span": "19"
-      }
-    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
-      staticStyle: {
-        "display": "inline",
-        "color": "#8391a5",
-        "font-size": "12px",
-        "margin-left": "10px",
-        "float": "right"
-      }
-    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
-      attrs: {
-        "span": "5"
-      }
-    }, [_c('Button', {
-      staticStyle: {
-        "float": "right",
-        "margin-left": "5px"
-      },
-      attrs: {
-        "type": "error",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_del_modal(item.msg_id)
-        }
-      }
-    }, [_vm._v("删除")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'Yes'),
-        expression: "item.status == 'Yes'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "success",
-        "size": "small"
-      }
-    }, [_vm._v("已查看")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'No'),
-        expression: "item.status == 'No'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "info",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_msg_modal(item.content, item.msg_id)
-        }
-      }
-    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
-      attrs: {
-        "dashed": ""
-      }
-    })], 1)
-  }), 0)])], 1) : _vm._e(), _vm._v(" "), (_vm.news_type == 'verify') ? _c('div', {
-    staticClass: "verify_news"
-  }, [_c('Button', {
-    staticStyle: {
-      "float": "right"
-    },
-    on: {
-      "click": function($event) {
-        _vm.modal_clean = true
-      }
-    }
-  }, [_vm._v("\n                            清空\n                        ")]), _vm._v(" "), _c('br'), _vm._v(" "), _c('h3', [_vm._v("认证消息页")]), _vm._v(" "), _c('div', {
-    staticClass: "message-list"
-  }, [_c('ul', {
-    staticStyle: {
-      "list-style-type": "none",
-      "margin-left": "5px",
-      "margin-top": "5px"
-    }
-  }, _vm._l((_vm.verify_news), function(item) {
-    return _c('li', [_c('div', {
-      staticClass: "relevant-detail"
-    }, [_c('Row', [_c('Col', {
-      attrs: {
-        "span": "19"
-      }
-    }, [_vm._v("\n                                                " + _vm._s(item.content) + "\n                                                "), _c('div', {
-      staticStyle: {
-        "display": "inline",
-        "color": "#8391a5",
-        "font-size": "12px",
-        "margin-left": "10px",
-        "float": "right"
-      }
-    }, [_vm._v(_vm._s(item.date))])]), _vm._v(" "), _c('Col', {
-      attrs: {
-        "span": "5"
-      }
-    }, [_c('Button', {
-      staticStyle: {
-        "float": "right",
-        "margin-left": "5px"
-      },
-      attrs: {
-        "type": "error",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_del_modal(item.msg_id)
-        }
-      }
-    }, [_vm._v("删除")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'Yes'),
-        expression: "item.status == 'Yes'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "success",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_verify_modal(item.apply_id, item.msg_id, item.status)
-        }
-      }
-    }, [_vm._v("已查看")]), _vm._v(" "), _c('Button', {
-      directives: [{
-        name: "show",
-        rawName: "v-show",
-        value: (item.status == 'No'),
-        expression: "item.status == 'No'"
-      }],
-      staticStyle: {
-        "float": "right"
-      },
-      attrs: {
-        "type": "info",
-        "size": "small"
-      },
-      on: {
-        "click": function($event) {
-          return _vm.show_verify_modal(item.apply_id, item.msg_id, item.status)
-        }
-      }
-    }, [_vm._v("未查看")])], 1)], 1)], 1), _vm._v(" "), _c('Divider', {
-      attrs: {
-        "dashed": ""
-      }
-    })], 1)
-  }), 0)])], 1) : _vm._e()])], 1), _vm._v(" "), _c('Layout', {
-    attrs: {
-      "id": "layout"
-    }
-  }, [_c('Footer', {
-    staticClass: "layout-footer-center",
-    staticStyle: {
-      "background-color": "#666666",
-      "color": "#eeeeee"
-    }
-  }, [_vm._v("\n                    2019-2019 © ZebraScience\n                    "), _c('router-link', {
-    staticStyle: {
-      "margin-left": "20px",
-      "color": "#eeeeee"
-    },
-    attrs: {
-      "to": {
-        path: '/aboutUs'
-      }
-    }
-  }, [_vm._v("联系我们")])], 1)], 1)], 1)], 1)
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-loader/node_modules/vue-hot-reload-api").rerender("data-v-1b7adf5e", module.exports)
-  }
-}
 
 /***/ })
 

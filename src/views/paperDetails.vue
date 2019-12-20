@@ -27,8 +27,6 @@
                                     </label>
                                 </Col>
                             </Row>
-                            <!--<label style="width: 60px;color: #999999" >作者：</label>-->
-                            <!--<label v-for="auth in paper.author" style="color: #2b85e4;font-size: 14px">{{auth}}&nbsp;&nbsp;&nbsp;</label>-->
                         </div>
                         <div class="dtl_l_love_auth_wr" >
                             <Row>
@@ -53,15 +51,10 @@
                                     </label>
                                 </Col>
                             </Row>
-                            <!--<label style="width: 60px;color: #999999" >作者：</label>-->
-                            <!--<label v-for="auth in paper.author" style="color: #2b85e4;font-size: 14px">{{auth}}&nbsp;&nbsp;&nbsp;</label>-->
                         </div>
-<!--                        <Divider />-->
                         <Button icon="ios-star" style="width: 30%; min-width: 200px; font-size: 14px;margin-left: 35%;margin-top: 20px" v-model="showlike" :class="{liked: isliked}" @click.native="toggle_like">
                             {{showlike}}</Button>
-<!--                        <Button icon="ios-text" style="width: 20%; font-size: 14px;margin-left: 10%;margin-top: 7px"-->
-<!--                                @click="add_comment"> 添加评论</Button>-->
-                        <Modal v-model="modal2" title="回复评论" ok-text="确定" cancel-text="取消" @on-ok="sub_comment"
+												<Modal v-model="modal2" title="回复评论" ok-text="确定" cancel-text="取消" @on-ok="sub_comment"
                                @on-cancel="cancel" >
                             <textarea v-model="content" placeholder="写下你的想法" style="margin-left: 4%;width:90%;height: 200px"/>
                         </Modal>
@@ -100,12 +93,7 @@
                             <div style="padding:0px 5px 0px 5px;" v-for="reply in item.replies">
                                 <b style="color: #86bbf2;font-size: 14px">{{reply.from_name}}&nbsp;&nbsp;<span style="color: #999999">回复</span>&nbsp;&nbsp;{{item.from.username}}
                                     <span style="color: #999999">{{reply.time}}</span>&nbsp&nbsp
-                                    <!--<Button type="text" shape="circle" icon="md-chatboxes" style="color: #999999" @click="add_reply"></Button>-->
-                                    <!--<Modal v-model="modal3" title="添加评论" ok-text="确定" cancel-text="取消" @on-ok="reply_comment"-->
-                                           <!--@on-cancel="cancel" >-->
-                                        <!--<textarea v-model="content" placeholder="写下你的想法" style="margin-left: 4%;width:90%;height: 200px"/>-->
-                                    <!--</Modal>-->
-                                </b>
+                               </b>
                                 <p class="commentColor">{{reply.content}}</p>
                                 <Divider v-if="item.replies.length>1" dashed style="margin:10px"/>
                             </div>
@@ -142,44 +130,14 @@
                 modal2: false,
                 modal3: false,
                 identity:this.GLOBAL.userType,
-                //identity:'EXPERT', //EXPERT USER VISITOR
                 isliked: '',
                 showlike: '',
                 content:'',
                 pageNum:1,
                 pageSize:5,
                 cur_cmt:[],
-                paper:{
-                    // paper_id:'', //'13e8bab7244258710c462441e19afbad',
-                    // name:'',
-                    // year:'',
-                    // source_url:[],
-                    // free_url:[],
-                    // source_journal:{
-                    //     name:'',
-                    //     date:''
-                    // },
-                    // author:[],
-                    // keyword:[],
-                    // abstract:''
-                },
-                comment:[
-                    // {
-                    //     date:'2019-5-16',from:{username:"cxk",userid:"111@123.com"},
-                    //     content:'你打篮球像我！',
-                    //     replies: [{              //回复评论的信息，是一个数组，如果没内容就是一个空数组
-                    //             responder: "xzd",    //评论者
-                    //             reviewers: "cxk",         //被评论者
-                    //             time: "2016-09-05",
-                    //             content: "你写代码像蔡徐坤"
-                    //         }]
-                    // },
-                    // {
-                    //     date:'2019-5-15',from:{username:"xzd",userid:"111@12354.com"},
-                    //     content:'你打篮球像cxk！',
-                    //     replies:[],
-                    // },
-                ]
+                paper:{},
+                comment:[]
             }
         },
         created() {
